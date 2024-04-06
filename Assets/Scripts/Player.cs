@@ -26,8 +26,7 @@ public class Player : MonoBehaviour
         {
             //Move
             float moveHorizontal = Input.GetAxis("Horizontal");
-            Vector2 movement = new Vector2(moveHorizontal, rb.velocity.y);
-            rb.AddForce(new Vector2(moveHorizontal * speed, 0f));
+            rb.velocity = new Vector2(moveHorizontal*speed, rb.velocity.y);
 
             //Jump
             if (Input.GetKeyDown(KeyCode.Space) && Physics2D.Raycast(rayer.position, Vector2.down, 0.3f, WhatToCheckOnJump))

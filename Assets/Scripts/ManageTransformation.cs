@@ -60,6 +60,7 @@ public class ManageTransformation : MonoBehaviour
         {
             BtnList[i].SetActive(true);
             BtnList[i].GetComponent<Image>().sprite = playerList[i].GetComponent<SpriteRenderer>().sprite;
+            BtnList[i].GetComponent<Image>().color = playerList[i].GetComponent<SpriteRenderer>().color;
         }
         playerList[currentindex].GetComponent<Light2D>().enabled = true;
         playerList[currentindex].GetComponent<Player>().AmIActive = true;

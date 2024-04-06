@@ -398,6 +398,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27f22fd9a2349491195e27abb43faec4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myplayerbody: {fileID: 598456606}
+  myAnimator: {fileID: 598456608}
   speed: 5
   jumpForce: 550
   WhatToCheckOnJump:
@@ -533,6 +535,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27f22fd9a2349491195e27abb43faec4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myplayerbody: {fileID: 0}
+  myAnimator: {fileID: 0}
   speed: 5
   jumpForce: 550
   WhatToCheckOnJump:
@@ -1671,15 +1675,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 6236baf5c81d1a448ad2eb97434a2d73, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 6236baf5c81d1a448ad2eb97434a2d73, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 6236baf5c81d1a448ad2eb97434a2d73, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 6236baf5c81d1a448ad2eb97434a2d73, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2377,6 +2381,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27f22fd9a2349491195e27abb43faec4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myplayerbody: {fileID: 0}
+  myAnimator: {fileID: 0}
   speed: 5
   jumpForce: 550
   WhatToCheckOnJump:

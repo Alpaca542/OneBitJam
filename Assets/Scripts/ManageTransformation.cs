@@ -11,7 +11,7 @@ public class ManageTransformation : MonoBehaviour
         playerList[currentindex].GetComponent<Light2D>().enabled = false;
         playerList[currentindex].GetComponent<Player>().AmIActive = false;
         currentindex++;
-        if(currentindex >= 3)
+        if(currentindex >= playerList.Length)
         {
             currentindex = 0;
         }

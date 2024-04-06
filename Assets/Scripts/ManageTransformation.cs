@@ -10,7 +10,6 @@ public class ManageTransformation : MonoBehaviour
     public GameObject[] playerList;
     public GameObject[] BtnList;
     public RectTransform panel;
-    public int currentindex = 0;
     public void OnTransformPressed()
     {
         StartCoroutine(Openpanel());
@@ -62,7 +61,7 @@ public class ManageTransformation : MonoBehaviour
             BtnList[i].GetComponent<Image>().sprite = playerList[i].GetComponent<SpriteRenderer>().sprite;
             BtnList[i].GetComponent<Image>().color = playerList[i].GetComponent<SpriteRenderer>().color;
         }
-        playerList[currentindex].GetComponent<Light2D>().enabled = true;
-        playerList[currentindex].GetComponent<Player>().AmIActive = true;
+        playerList[0].GetComponent<Light2D>().enabled = true;
+        playerList[0].GetComponent<Player>().AmIActive = true;
     }
 }

@@ -18,4 +18,9 @@ public class ManageTransformation : MonoBehaviour
         playerList[currentindex].GetComponent<Light2D>().enabled = true;
         playerList[currentindex].GetComponent<Player>().AmIActive = true;
     }
+    private void Start()
+    {
+        playerList[currentindex].GetComponent<Light2D>().enabled = true;
+        playerList[currentindex].GetComponent<Player>().AmIActive = true;
+    }
 }

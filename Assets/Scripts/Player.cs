@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     public float jumpForce = 5f;
 
     [Header("Debug")]
-    public LayerMask grnd;
+    public LayerMask WhatToCheckOnJump;
     private Rigidbody2D rb;
     public bool AmIActive = false;
 
@@ -28,7 +28,7 @@ public class Player : MonoBehaviour
             rb.AddForce(new Vector2(moveHorizontal * speed, 0f));
 
             //Jump
-            if (Input.GetKeyDown(KeyCode.Space) && Physics2D.Raycast(transform.position, Vector2.down, 0.6f, grnd))
+            if (Input.GetKeyDown(KeyCode.Space) && Physics2D.Raycast(transform.position, Vector2.down, 0.6f, WhatToCheckOnJump))
             {
                 rb.AddForce(Vector2.up * jumpForce);
             }

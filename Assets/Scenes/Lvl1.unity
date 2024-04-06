@@ -267,7 +267,7 @@ GameObject:
   - component: {fileID: 113287107}
   - component: {fileID: 113287106}
   - component: {fileID: 113287110}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -303,9 +303,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   jumpForce: 500
-  grnd:
+  WhatToCheckOnJump:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 72
   AmIActive: 0
 --- !u!50 &113287107
 Rigidbody2D:
@@ -674,7 +674,7 @@ GameObject:
   - component: {fileID: 335751423}
   - component: {fileID: 335751425}
   - component: {fileID: 335751426}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -834,9 +834,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   jumpForce: 500
-  grnd:
+  WhatToCheckOnJump:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 72
   AmIActive: 0
 --- !u!114 &335751426
 MonoBehaviour:
@@ -1164,7 +1164,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 644882213}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Players
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1668,7 +1668,7 @@ GameObject:
   - component: {fileID: 1103847270}
   - component: {fileID: 1103847269}
   - component: {fileID: 1103847273}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1704,9 +1704,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   jumpForce: 500
-  grnd:
+  WhatToCheckOnJump:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 72
   AmIActive: 0
 --- !u!50 &1103847270
 Rigidbody2D:

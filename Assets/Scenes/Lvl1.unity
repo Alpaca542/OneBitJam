@@ -331,7 +331,7 @@ MonoBehaviour:
   jumpForce: 550
   WhatToCheckOnJump:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 72
   AmIActive: 0
   rayer: {fileID: 1308049461}
 --- !u!50 &46959921
@@ -537,7 +537,7 @@ MonoBehaviour:
   jumpForce: 550
   WhatToCheckOnJump:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 72
   AmIActive: 0
   rayer: {fileID: 990201813}
 --- !u!50 &113287107
@@ -1794,7 +1794,7 @@ MonoBehaviour:
   jumpForce: 550
   WhatToCheckOnJump:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 72
   AmIActive: 0
   rayer: {fileID: 1103003092}
 --- !u!50 &1103847270
@@ -2197,7 +2197,7 @@ Transform:
   m_GameObject: {fileID: 1308049460}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.581, z: 0}
+  m_LocalPosition: {x: 0, y: -0.938, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

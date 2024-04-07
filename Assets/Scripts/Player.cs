@@ -43,7 +43,7 @@ public class Player : MonoBehaviour
             rb.velocity = new Vector2(moveHorizontal*speed, rb.velocity.y);
 
             //Jump
-            if (Input.GetKeyDown(KeyCode.Space) && Physics2D.Raycast(rayer.position, Vector2.down, 0.3f, WhatToCheckOnJump))
+            if (Input.GetKeyDown(KeyCode.Space) && Physics2D.Raycast(rayer.position, Vector2.down, 0.001f, WhatToCheckOnJump))
             {
                 rb.AddForce(Vector2.up * jumpForce);
             }

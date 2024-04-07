@@ -14,6 +14,10 @@ public class ButtonScript : MonoBehaviour
             {
                 WhatIsConnected.GetComponent<ElevatorScript>().DoWeGoUp = true;
             }
+            else if (WhatIsConnected.tag == "Door")
+            {
+                WhatIsConnected.GetComponent<DoorScript>().DoWeGoUp = true;
+            }
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -24,6 +28,10 @@ public class ButtonScript : MonoBehaviour
             if (WhatIsConnected.tag == "Elevator")
             {
                 WhatIsConnected.GetComponent<ElevatorScript>().DoWeGoUp = false;
+            }
+            else if (WhatIsConnected.tag == "Door")
+            {
+                WhatIsConnected.GetComponent<DoorScript>().DoWeGoUp = false;
             }
         }
     }

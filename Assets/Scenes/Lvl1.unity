@@ -331,7 +331,7 @@ MonoBehaviour:
   jumpForce: 550
   WhatToCheckOnJump:
     serializedVersion: 2
-    m_Bits: 72
+    m_Bits: 8
   AmIActive: 0
   rayer: {fileID: 1308049461}
 --- !u!50 &46959921
@@ -529,7 +529,7 @@ MonoBehaviour:
   jumpForce: 550
   WhatToCheckOnJump:
     serializedVersion: 2
-    m_Bits: 72
+    m_Bits: 8
   AmIActive: 0
   rayer: {fileID: 990201813}
 --- !u!50 &113287107
@@ -1786,7 +1786,7 @@ MonoBehaviour:
   jumpForce: 550
   WhatToCheckOnJump:
     serializedVersion: 2
-    m_Bits: 72
+    m_Bits: 8
   AmIActive: 0
   rayer: {fileID: 1103003092}
 --- !u!50 &1103847270

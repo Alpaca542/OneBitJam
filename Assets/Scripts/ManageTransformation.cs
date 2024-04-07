@@ -10,38 +10,38 @@ public class ManageTransformation : MonoBehaviour
     public GameObject[] playerList;
     public GameObject[] BtnList;
     public RectTransform panel;
-    public void OnTransformPressed()
-    {
-        StartCoroutine(Openpanel());
-    }
-    IEnumerator Openpanel()
-    {
-        panel.localScale = new Vector2(1, 0f);
-        yield return new WaitForSeconds(0.02f);
-        panel.localScale = new Vector2(1, 0.2f);
-        yield return new WaitForSeconds(0.02f);
-        panel.localScale = new Vector2(1, 0.4f);
-        yield return new WaitForSeconds(0.02f);
-        panel.localScale = new Vector2(1, 0.6f);
-        yield return new WaitForSeconds(0.02f);
-        panel.localScale = new Vector2(1, 0.8f);
-        yield return new WaitForSeconds(0.02f);
-        panel.localScale = new Vector2(1, 1);
-    }
-    IEnumerator CLosepanel()
-    {
-        panel.localScale = new Vector2(1, 1);
-        yield return new WaitForSeconds(0.02f);
-        panel.localScale = new Vector2(1, 0.8f);
-        yield return new WaitForSeconds(0.02f);
-        panel.localScale = new Vector2(1, 0.6f);
-        yield return new WaitForSeconds(0.02f);
-        panel.localScale = new Vector2(1, 0.4f);
-        yield return new WaitForSeconds(0.02f);
-        panel.localScale = new Vector2(1, 0.2f);
-        yield return new WaitForSeconds(0.02f);
-        panel.localScale = new Vector2(1, 0);
-    }
+    //public void OnTransformPressed()
+    //{
+    //    StartCoroutine(Openpanel());
+    //}
+    //IEnumerator Openpanel()
+    //{
+    //    panel.localScale = new Vector2(1, 0f);
+    //    yield return new WaitForSeconds(0.02f);
+    //    panel.localScale = new Vector2(1, 0.2f);
+    //    yield return new WaitForSeconds(0.02f);
+    //    panel.localScale = new Vector2(1, 0.4f);
+    //    yield return new WaitForSeconds(0.02f);
+    //    panel.localScale = new Vector2(1, 0.6f);
+    //    yield return new WaitForSeconds(0.02f);
+    //    panel.localScale = new Vector2(1, 0.8f);
+    //    yield return new WaitForSeconds(0.02f);
+    //    panel.localScale = new Vector2(1, 1);
+    //}
+    //IEnumerator CLosepanel()
+    //{
+    //    panel.localScale = new Vector2(1, 1);
+    //    yield return new WaitForSeconds(0.02f);
+    //    panel.localScale = new Vector2(1, 0.8f);
+    //    yield return new WaitForSeconds(0.02f);
+    //    panel.localScale = new Vector2(1, 0.6f);
+    //    yield return new WaitForSeconds(0.02f);
+    //    panel.localScale = new Vector2(1, 0.4f);
+    //    yield return new WaitForSeconds(0.02f);
+    //    panel.localScale = new Vector2(1, 0.2f);
+    //    yield return new WaitForSeconds(0.02f);
+    //    panel.localScale = new Vector2(1, 0);
+    //}
     public void OnChosenInPanel(int BtnNumber)
     {
         foreach(GameObject gmb in playerList)
@@ -51,7 +51,7 @@ public class ManageTransformation : MonoBehaviour
         }
         playerList[BtnNumber].GetComponent<Light2D>().enabled = true;
         playerList[BtnNumber].GetComponent<Player>().AmIActive = true;
-        StartCoroutine(CLosepanel());
+        //StartCoroutine(CLosepanel());
         Camera.main.gameObject.GetComponent<playerFollow>().ChoosePlayer();
     }
     private void Awake()

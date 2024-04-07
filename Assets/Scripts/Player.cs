@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     [Header("Debug")]
     public LayerMask WhatToCheckOnJump;
     public bool AmIActive = false;
+    public bool AmIFlying = false;
     public Transform rayer;
 
     private Rigidbody2D rb;
@@ -21,10 +22,13 @@ public class Player : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
     }
-
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        AmIFlying = false;
+    }
     void Update()
     {
-        if (AmIActive)
+        if (AmIActive && !AmIFlying)
         {
             //Move
             float moveHorizontal = Input.GetAxis("Horizontal");

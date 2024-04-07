@@ -31,6 +31,7 @@ public class Player : MonoBehaviour
         if (AmIActive && !AmIFlying)
         {
             //Move
+            
             float moveHorizontal = Input.GetAxis("Horizontal");
             if(moveHorizontal!=0)
             {
@@ -44,6 +45,7 @@ public class Player : MonoBehaviour
             {
                 myAnimator.SetBool("walkAnimation", false);
             }
+            
             rb.velocity = new Vector2(moveHorizontal*speed, rb.velocity.y);
 
             //Jump
@@ -51,6 +53,10 @@ public class Player : MonoBehaviour
             {
                 rb.AddForce(Vector2.up * jumpForce);
             }
+        }
+        if (rb.velocity == Vector2.zero)
+        {
+            myAnimator.SetBool("walkAnimation", false);
         }
     }
 }

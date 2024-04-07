@@ -8,16 +8,17 @@ public class ElevatorScript : MonoBehaviour
     public Transform BottomPos;
     public bool DoWeGoUp;
     public float speed = 10f;
+    public GameObject platf;
     private Rigidbody2D rb;
     private void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        rb = platf.GetComponent<Rigidbody2D>();
     }
     public void GoUp()
     {
-        if (transform.position != TopPos.position)
+        if (platf.transform.position != TopPos.position)
         {
-            rb.velocity = (TopPos.position - transform.position) * speed;
+            rb.velocity = (TopPos.position - platf.transform.position) * speed;
         }
         else
         {
@@ -26,9 +27,9 @@ public class ElevatorScript : MonoBehaviour
     }
     public void GoDown()
     {
-        if (transform.position != BottomPos.position)
+        if (platf.transform.position != BottomPos.position)
         {
-            rb.velocity = (BottomPos.position - transform.position)*speed;
+            rb.velocity = (BottomPos.position - platf.transform.position)*speed;
         }
         else
         {

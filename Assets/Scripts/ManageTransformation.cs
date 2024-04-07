@@ -52,8 +52,9 @@ public class ManageTransformation : MonoBehaviour
         playerList[BtnNumber].GetComponent<Light2D>().enabled = true;
         playerList[BtnNumber].GetComponent<Player>().AmIActive = true;
         StartCoroutine(CLosepanel());
+        Camera.main.gameObject.GetComponent<playerFollow>().ChoosePlayer();
     }
-    private void Start()
+    private void Awake()
     {
         for (int i = 0; i < playerList.Length; i++)
         {

@@ -5,13 +5,9 @@ using UnityEngine;
 
 public class playerFollow : MonoBehaviour
 {
-        public GameObject player;
-        private Vector3 playervector;
-        public float speed;
-        private void Start()
-        {
-        ChoosePlayer();
-        }
+    public GameObject player;
+    private Vector3 playervector;
+    public float speed;
     public void ChoosePlayer()
     {
         GameObject[] playerlist = GameObject.FindGameObjectsWithTag("Player");

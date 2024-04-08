@@ -8,6 +8,7 @@ TagManager:
   - Elevator
   - Door
   - Box
+  - Slime
   layers:
   - Default
   - TransparentFX

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class Player : MonoBehaviour
 {
@@ -14,12 +15,14 @@ public class Player : MonoBehaviour
     public LayerMask WhatToCheckOnJump;
     public bool AmIActive = false;
     public bool AmIFlying = false;
+    private GameObject[] playerList;
     public Transform rayer;
 
     private Rigidbody2D rb;
 
     void Start()
     {
+        playerList = GameObject.FindGameObjectsWithTag("Player");
         rb = GetComponent<Rigidbody2D>();
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -57,6 +60,24 @@ public class Player : MonoBehaviour
         if (rb.velocity == Vector2.zero)
         {
             myAnimator.SetBool("walkAnimation", false);
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Slime" && !AmIActive)
+        {
+            foreach (GameObject gmb in playerList)
+            {
+                if (gmb != gameObject)
+                {
+                    gmb.GetComponent<Light2D>().enabled = false;
+                    gmb.GetComponent<Player>().AmIActive = false;
+                }
+            }
+            GetComponent<Light2D>().enabled = true;
+            AmIActive = true;
+            Camera.main.gameObject.GetComponent<playerFollow>().player = gameObject;
+            collision.gameObject.SetActive(false);
         }
     }
 }

@@ -10,20 +10,32 @@ public class ManageTransformation : MonoBehaviour
     public GameObject[] playerList;
     public GameObject[] BtnList;
     public RectTransform panel;
+    public GameObject slime;
     public void OnChosenInPanel(int BtnNumber)
     {
-        foreach(GameObject gmb in playerList)
+        if (Camera.main.GetComponent<playerFollow>().player != playerList[BtnNumber])
+        {
+            slime.SetActive(true);
+            slime.transform.position = Camera.main.GetComponent<playerFollow>().player.transform.position;
+            Camera.main.GetComponent<playerFollow>().player = slime;
+            slime.GetComponent<SlimeController>().TransformTo(playerList[BtnNumber]);
+        }
+    }
+    public void OnChosenSlimel()
+    {
+        slime.SetActive(true);
+        slime.transform.position = Camera.main.GetComponent<playerFollow>().player.transform.position;
+        foreach (GameObject gmb in playerList)
         {
             gmb.GetComponent<Light2D>().enabled = false;
             gmb.GetComponent<Player>().AmIActive = false;
         }
-        playerList[BtnNumber].GetComponent<Light2D>().enabled = true;
-        playerList[BtnNumber].GetComponent<Player>().AmIActive = true;
-        //StartCoroutine(CLosepanel());
-        Camera.main.gameObject.GetComponent<playerFollow>().ChoosePlayer();
+        slime.GetComponent<SlimeController>().BeAwake();
+        Camera.main.GetComponent<playerFollow>().player = slime;
     }
     private void Awake()
     {
+        slime = GameObject.FindGameObjectWithTag("Slime");
         playerList = GameObject.FindGameObjectsWithTag("Player");
         for (int i = 0; i < playerList.Length; i++)
         {
@@ -31,7 +43,5 @@ public class ManageTransformation : MonoBehaviour
             BtnList[i].GetComponent<Image>().sprite = playerList[i].GetComponent<SpriteRenderer>().sprite;
             BtnList[i].GetComponent<Image>().color = playerList[i].GetComponent<SpriteRenderer>().color;
         }
-        playerList[0].GetComponent<Light2D>().enabled = true;
-        playerList[0].GetComponent<Player>().AmIActive = true;
     }
 }

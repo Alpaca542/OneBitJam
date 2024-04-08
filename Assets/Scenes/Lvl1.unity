@@ -259,7 +259,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Hello!
+  m_Text: Dialogue text
 --- !u!222 &53084568
 CanvasRenderer:
   m_ObjectHideFlags: 0

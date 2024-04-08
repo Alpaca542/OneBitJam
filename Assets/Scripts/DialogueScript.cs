@@ -24,7 +24,6 @@ public class DialogueScript : MonoBehaviour
         if (faces[index].name == "SlimeTexture")
         {
             Display2.gameObject.GetComponent<RectTransform>().sizeDelta = new Vector2(300, 190);
-            Display2.transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
         }
         Display2.sprite = faces[index];
         foreach (char letter1 in sentences[index].ToCharArray())

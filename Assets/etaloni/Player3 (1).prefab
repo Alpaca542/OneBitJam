@@ -135,8 +135,9 @@ MonoBehaviour:
   jumpForce: 550
   WhatToCheckOnJump:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 72
   AmIActive: 0
+  AmIFlying: 0
   rayer: {fileID: 6338479222504454495}
 --- !u!114 &1876612137830989094
 MonoBehaviour:

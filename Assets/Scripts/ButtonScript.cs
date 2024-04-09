@@ -10,7 +10,8 @@ public class ButtonScript : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
-            if(MyText != null)
+            GetComponent<BoxCollider2D>().size = new Vector2(GetComponent<BoxCollider2D>().size.x, 20);
+            if (MyText != null)
             {
                 MyText.SetActive(false);
             }
@@ -27,6 +28,7 @@ public class ButtonScript : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
+        GetComponent<BoxCollider2D>().size = new Vector2(GetComponent<BoxCollider2D>().size.x, 4);
         if (collision.gameObject.tag == "Player")
         {
             if (MyText != null)

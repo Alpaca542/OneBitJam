@@ -513,7 +513,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 701.99, y: -49.86}
+  m_AnchoredPosition: {x: 879, y: -49.86}
   m_SizeDelta: {x: 211.22, y: 35.68}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &233338617
@@ -2456,7 +2456,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 366963878635480523, guid: 4a628de7455e24cbb80d721d9c10751d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.3069158
+      value: -1.02
       objectReference: {fileID: 0}
     - target: {fileID: 366963878635480523, guid: 4a628de7455e24cbb80d721d9c10751d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3076,7 +3076,7 @@ MonoBehaviour:
   - Shut up, you, little beast
   - There is no way you're getting out of this cage
   - Fullish human...
-  - '*Tutorial how to use controlling*'
+  - Use guard sprites on the left to control them
   - I have one more servant now
   - That looks like a good trampoline
   - Perhaps I could use it to get up...
@@ -3805,7 +3805,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3736810033491110088, guid: 81d6dafd7e05b45ed8e51421a798bd9c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.0451156
+      value: -1.44
       objectReference: {fileID: 0}
     - target: {fileID: 3736810033491110088, guid: 81d6dafd7e05b45ed8e51421a798bd9c, type: 3}
       propertyPath: m_LocalPosition.y

@@ -20,6 +20,14 @@ public class DialogueScript : MonoBehaviour
 
     IEnumerator Type()
     {
+        if(Camera.main.GetComponent<playerFollow>().player.tag == "Player")
+        {
+            Camera.main.GetComponent<playerFollow>().player.GetComponent<Player>().enabled = false;
+        }
+        else
+        {
+            GameObject.FindGameObjectWithTag("Slime").GetComponent<SlimeController>().enabled = false;
+        }
         cnvInGame.SetActive(false);
         btnContinue.SetActive(false);
         Display.text = "";
@@ -57,6 +65,14 @@ public class DialogueScript : MonoBehaviour
         }
         else
         {
+            if (Camera.main.GetComponent<playerFollow>().player.tag == "Player")
+            {
+                Camera.main.GetComponent<playerFollow>().player.GetComponent<Player>().enabled = true;
+            }
+            else
+            {
+                GameObject.FindGameObjectWithTag("Slime").GetComponent<SlimeController>().enabled = true;
+            }
             cnvInGame.SetActive(true);
             btnContinue.SetActive(false);
             cnv.SetActive(false);

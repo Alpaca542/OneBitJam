@@ -2062,6 +2062,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Slime
       objectReference: {fileID: 0}
+    - target: {fileID: 4964568208062091409, guid: a2c8d3cb66d0d4be2b9e2cf8aeeb0de7, type: 3}
+      propertyPath: m_GravityScale
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3078,10 +3082,10 @@ MonoBehaviour:
   - Fullish human...
   - Use guard sprites on the left to control them
   - I have one more servant now
+  - I might be able to use this elevator...
   - That looks like a good trampoline
   - Perhaps I could use it to get up...
   - Yes! I did it!
-  - '*next level*'
   faces:
   - {fileID: 21300000, guid: 0082df3e1edb241288e97c5fe50e4b97, type: 3}
   - {fileID: 21300000, guid: 0082df3e1edb241288e97c5fe50e4b97, type: 3}
@@ -3096,7 +3100,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0082df3e1edb241288e97c5fe50e4b97, type: 3}
   - {fileID: 21300000, guid: 0082df3e1edb241288e97c5fe50e4b97, type: 3}
   - {fileID: 21300000, guid: 0082df3e1edb241288e97c5fe50e4b97, type: 3}
-  stopIndexes: 08000000090000000b000000
+  stopIndexes: 080000000a0000000c0000000d000000
   index: 0
   btnContinue: {fileID: 542807531}
   cnv: {fileID: 633097137}
@@ -3805,7 +3809,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3736810033491110088, guid: 81d6dafd7e05b45ed8e51421a798bd9c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.44
+      value: -1.14
       objectReference: {fileID: 0}
     - target: {fileID: 3736810033491110088, guid: 81d6dafd7e05b45ed8e51421a798bd9c, type: 3}
       propertyPath: m_LocalPosition.y

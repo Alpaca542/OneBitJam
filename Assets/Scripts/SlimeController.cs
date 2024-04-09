@@ -40,15 +40,4 @@ public class SlimeController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
     }
-    public void TransformTo(GameObject ToWho)
-    {
-        AmIActive = false;
-        GetComponent<BoxCollider2D>().isTrigger = true;
-        rb.AddForce((ToWho.transform.position - transform.position) * 150f);
-    }
-    public void BeAwake()
-    {
-        AmIActive = true;
-        GetComponent<BoxCollider2D>().isTrigger = false;
-    }
 }

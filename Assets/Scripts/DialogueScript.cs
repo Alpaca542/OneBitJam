@@ -13,7 +13,7 @@ public class DialogueScript : MonoBehaviour
     public int[] stopIndexes;
     public int index;
     public GameObject btnContinue;
-    public GameObject Panel;
+    public GameObject cnv;
     public float typingspeed = 0.02f;
     IEnumerator coroutine;
 
@@ -49,7 +49,7 @@ public class DialogueScript : MonoBehaviour
         else
         {
             btnContinue.SetActive(false);
-            Panel.SetActive(false);
+            cnv.SetActive(false);
         }
     }
     private void Update()

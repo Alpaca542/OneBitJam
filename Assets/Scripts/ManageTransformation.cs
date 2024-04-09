@@ -11,26 +11,37 @@ public class ManageTransformation : MonoBehaviour
     public GameObject[] BtnList;
     public RectTransform panel;
     public GameObject slime;
+    public GameObject line;
+    public GameObject ln;
     public void OnChosenInPanel(int BtnNumber)
     {
         if (Camera.main.GetComponent<playerFollow>().player != playerList[BtnNumber])
         {
-            slime.SetActive(true);
-            slime.transform.position = Camera.main.GetComponent<playerFollow>().player.transform.position;
-            Camera.main.GetComponent<playerFollow>().player = slime;
-            slime.GetComponent<SlimeController>().TransformTo(playerList[BtnNumber]);
+            if (ln != null)
+                Destroy(ln);
+            foreach (GameObject gmb in playerList)
+            {
+                gmb.GetComponent<Light2D>().enabled = false;
+                gmb.GetComponent<Player>().AmIActive = false;
+            }
+            slime.GetComponent<SlimeController>().AmIActive = false;
+            slime.GetComponent<Light2D>().enabled = false;
+            ln = Instantiate(line, slime.transform.position, Quaternion.identity);
+            ln.GetComponent<LineThatFollows>().WhatToFollow = playerList[BtnNumber];
+            playerList[BtnNumber].GetComponent<Light2D>().enabled = true;
+            playerList[BtnNumber].GetComponent<Player>().AmIActive = true;
+            Camera.main.GetComponent<playerFollow>().player = playerList[BtnNumber];
         }
     }
     public void OnChosenSlimel()
     {
-        slime.SetActive(true);
-        slime.transform.position = Camera.main.GetComponent<playerFollow>().player.transform.position;
+        Destroy(ln);
         foreach (GameObject gmb in playerList)
         {
             gmb.GetComponent<Light2D>().enabled = false;
             gmb.GetComponent<Player>().AmIActive = false;
         }
-        slime.GetComponent<SlimeController>().BeAwake();
+        slime.GetComponent<SlimeController>().AmIActive = true;
         Camera.main.GetComponent<playerFollow>().player = slime;
     }
     private void Awake()

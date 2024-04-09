@@ -14,11 +14,13 @@ public class DialogueScript : MonoBehaviour
     public int index;
     public GameObject btnContinue;
     public GameObject cnv;
+    public GameObject cnvInGame;
     public float typingspeed = 0.02f;
     IEnumerator coroutine;
 
     IEnumerator Type()
     {
+        cnvInGame.SetActive(false);
         btnContinue.SetActive(false);
         Display.text = "";
         if (faces[index].name == "SlimeTexture")
@@ -35,6 +37,13 @@ public class DialogueScript : MonoBehaviour
     }
     private void Start()
     {
+        cnv.SetActive(true);
+        coroutine = Type();
+        StartCoroutine(coroutine);
+    }
+    public void Stststtst()
+    {
+        cnv.SetActive(true);
         coroutine = Type();
         StartCoroutine(coroutine);
     }
@@ -48,6 +57,7 @@ public class DialogueScript : MonoBehaviour
         }
         else
         {
+            cnvInGame.SetActive(true);
             btnContinue.SetActive(false);
             cnv.SetActive(false);
         }

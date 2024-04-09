@@ -5,10 +5,15 @@ using UnityEngine;
 public class ButtonScript : MonoBehaviour
 {
     public GameObject WhatIsConnected;
+    public GameObject MyText;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "Player")
         {
+            if(MyText != null)
+            {
+                MyText.SetActive(false);
+            }
             transform.localScale = new Vector2(0.6f, 0.05f);
             if (WhatIsConnected.tag == "Elevator")
             {
@@ -24,6 +29,10 @@ public class ButtonScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            if (MyText != null)
+            {
+                MyText.SetActive(true);
+            }
             transform.localScale = new Vector2(0.6f, 0.1f);
             if (WhatIsConnected.tag == "Elevator")
             {

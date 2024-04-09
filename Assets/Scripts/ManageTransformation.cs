@@ -42,6 +42,7 @@ public class ManageTransformation : MonoBehaviour
             gmb.GetComponent<Player>().AmIActive = false;
         }
         slime.GetComponent<SlimeController>().AmIActive = true;
+        slime.GetComponent<Light2D>().enabled = true;
         Camera.main.GetComponent<playerFollow>().player = slime;
     }
     private void Awake()

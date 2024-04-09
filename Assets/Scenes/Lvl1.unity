@@ -2863,6 +2863,10 @@ PrefabInstance:
       value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 2163322014373322140, guid: 817c4b81895a94adc9e9110401b9a3fe, type: 3}
+      propertyPath: m_Mass
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2163322014373322140, guid: 817c4b81895a94adc9e9110401b9a3fe, type: 3}
       propertyPath: m_Constraints
       value: 4
       objectReference: {fileID: 0}

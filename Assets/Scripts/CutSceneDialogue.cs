@@ -18,6 +18,7 @@ public class CutSceneDialogue : MonoBehaviour
     public GameObject cnvInGame;
     public GameObject explosion1;
     public float typingspeed = 0.02f;
+    public GameObject finisher;
     IEnumerator coroutine;
 
     IEnumerator Type()
@@ -87,7 +88,7 @@ public class CutSceneDialogue : MonoBehaviour
     }
     public void GoToMenu()
     {
-        SceneManager.LoadScene("LvlMenu");
+        finisher.GetComponent<LevelFinisher>().StopTheLevel();
     }
     private void Update()
     {

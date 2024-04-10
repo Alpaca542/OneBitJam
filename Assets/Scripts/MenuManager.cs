@@ -7,6 +7,13 @@ public class MenuManager : MonoBehaviour
 {
     public GameObject SmokeEffect;
     public int lvl;
+    private void Start()
+    {
+        if (!PlayerPrefs.HasKey("CurentLevel"))
+        {
+            PlayerPrefs.SetInt("CurentLevel", 1);
+        }
+    }
     public void OpenLastLevel()
     {
         SmokeEffect.SetActive(true);
@@ -46,7 +53,6 @@ public class MenuManager : MonoBehaviour
     }
     public void InvokeOpenLastLevel()
     {
-        SceneManager.LoadScene("Lvl" + PlayerPrefs.GetInt("CurentLevel").ToString());
-
+        SceneManager.LoadScene("Lvl" + (PlayerPrefs.GetInt("CurentLevel") + 1).ToString());
     }
 }

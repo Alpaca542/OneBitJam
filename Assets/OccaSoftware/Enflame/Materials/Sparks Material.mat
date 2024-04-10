@@ -132,8 +132,8 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 0
     m_Colors:
-    - Color_79FFAF13: {r: 22.363522, g: 15.221246, b: 5.0347195, a: 0}
-    - Color_B81FB4C8: {r: 145.31857, g: 39.56317, b: 0, a: 0}
+    - Color_79FFAF13: {r: 29.857058, g: 29.857058, b: 29.857058, a: 0}
+    - Color_B81FB4C8: {r: 194.0117, g: 194.0117, b: 194.0117, a: 0}
     - _BaseColor: {r: 1, g: 0, b: 0, a: 1}
     - _BaseColorAddSubDiff: {r: 0, g: 0, b: 0, a: 0}
     - _CameraFadeParams: {r: 0, g: Infinity, b: 0, a: 0}

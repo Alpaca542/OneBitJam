@@ -23,10 +23,12 @@ public class DialogueScript : MonoBehaviour
         if(Camera.main.GetComponent<playerFollow>().player.tag == "Player")
         {
             Camera.main.GetComponent<playerFollow>().player.GetComponent<Player>().enabled = false;
+            Camera.main.GetComponent<playerFollow>().player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         }
         else
         {
             GameObject.FindGameObjectWithTag("Slime").GetComponent<SlimeController>().enabled = false;
+            GameObject.FindGameObjectWithTag("Slime").GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         }
         cnvInGame.SetActive(false);
         btnContinue.SetActive(false);
@@ -37,7 +39,7 @@ public class DialogueScript : MonoBehaviour
         }
         else if (faces[index].name == "mantexturepng")
         {
-            Display2.gameObject.GetComponent<RectTransform>().sizeDelta = new Vector2(300, 300);
+            Display2.gameObject.GetComponent<RectTransform>().sizeDelta = new Vector2(256, 256);
         }
         Display2.sprite = faces[index];
         foreach (char letter1 in sentences[index].ToCharArray())

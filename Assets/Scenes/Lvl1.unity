@@ -1489,7 +1489,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 19900004, guid: 40956557a285559488a2c9ff1ac6e7f6, type: 3}
       propertyPath: m_SortingOrder
-      value: 1000
+      value: 1100
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11400000, guid: 40956557a285559488a2c9ff1ac6e7f6, type: 3}
@@ -3074,7 +3074,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 32767
+  m_SortingOrder: 1000
   m_TargetDisplay: 0
 --- !u!224 &1303624453
 RectTransform:

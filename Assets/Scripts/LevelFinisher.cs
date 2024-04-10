@@ -28,7 +28,7 @@ public class LevelFinisher : MonoBehaviour
     }
     public void InvokeOpenLastLevel()
     {
-        SceneManager.LoadScene("Lvl"+(PlayerPrefs.GetInt("CurentLevel")+1).ToString());
+        SceneManager.LoadScene("Lvl" + (PlayerPrefs.GetInt("CurentLevel")+1).ToString());
     }
     public void InvokeOpenLvlMenu()
     {

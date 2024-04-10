@@ -63,25 +63,28 @@ public class DialogueScript : MonoBehaviour
     }
     public void ContinueTyping()
     {
-        index++;
-        if(Array.IndexOf(stopIndexes, index) == -1)
+        if (cnv.activeSelf)
         {
-            coroutine = Type();
-            StartCoroutine(coroutine);
-        }
-        else
-        {
-            if (Camera.main.GetComponent<playerFollow>().player.tag == "Player")
+            index++;
+            if (Array.IndexOf(stopIndexes, index) == -1)
             {
-                Camera.main.GetComponent<playerFollow>().player.GetComponent<Player>().enabled = true;
+                coroutine = Type();
+                StartCoroutine(coroutine);
             }
             else
             {
-                GameObject.FindGameObjectWithTag("Slime").GetComponent<SlimeController>().enabled = true;
+                if (Camera.main.GetComponent<playerFollow>().player.tag == "Player")
+                {
+                    Camera.main.GetComponent<playerFollow>().player.GetComponent<Player>().enabled = true;
+                }
+                else
+                {
+                    GameObject.FindGameObjectWithTag("Slime").GetComponent<SlimeController>().enabled = true;
+                }
+                cnvInGame.SetActive(true);
+                btnContinue.SetActive(false);
+                cnv.SetActive(false);
             }
-            cnvInGame.SetActive(true);
-            btnContinue.SetActive(false);
-            cnv.SetActive(false);
         }
     }
     private void Update()

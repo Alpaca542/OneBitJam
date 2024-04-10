@@ -80,7 +80,7 @@ public class CutSceneDialogue : MonoBehaviour
                 GameObject.FindGameObjectWithTag("Slime").GetComponent<SlimeController>().enabled = true;
             }
             explosion1.SetActive(true);
-            Invoke(nameof(GoToMenu), 1f);
+            Invoke(nameof(GoToMenu), 0.8f);
             btnContinue.SetActive(false);
             cnv.SetActive(false);
         }

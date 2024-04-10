@@ -1162,7 +1162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90a7bfb0f47973a4c948f925a28f132a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 2052144525}
   speed: 3
 --- !u!1 &542807531
 GameObject:
@@ -1247,8 +1247,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1641821818}
-        m_TargetAssemblyTypeName: DialogueScript, Assembly-CSharp
+      - m_Target: {fileID: 1641821820}
+        m_TargetAssemblyTypeName: CutSceneDialogue, Assembly-CSharp
         m_MethodName: ContinueTyping
         m_Mode: 1
         m_Arguments:
@@ -1790,7 +1790,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1996269949880324799, guid: c8507dd02bfb5e94f886adb95dca0ae8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.01
+      value: -3.95
       objectReference: {fileID: 0}
     - target: {fileID: 1996269949880324799, guid: c8507dd02bfb5e94f886adb95dca0ae8, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2617,7 +2617,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -553.2399, y: 0}
-  m_SizeDelta: {x: 314.88, y: 255.12}
+  m_SizeDelta: {x: 256, y: 256}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1571196511
 MonoBehaviour:
@@ -2639,7 +2639,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 40f0743d7cd0540d38d936c3b4475b17, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2744,7 +2744,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1641821819}
-  - component: {fileID: 1641821818}
+  - component: {fileID: 1641821820}
   m_Layer: 0
   m_Name: DialogueManager
   m_TagString: Untagged
@@ -2752,54 +2752,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1641821818
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1641821817}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c3231a36de2740c29e7b16dae9486c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Display: {fileID: 53084567}
-  Display2: {fileID: 1571196511}
-  sentences:
-  - Wha... What happened
-  - Where am I?
-  - Seems like these stupid species tried to trap me
-  - Haha, it was not a good idea
-  - Shut up, you, little beast
-  - There is no way you're getting out of this cage
-  - Fullish human...
-  - Use guard sprites on the left to control them
-  - I have one more servant now
-  - I might be able to use this elevator...
-  - That looks like a good trampoline
-  - Perhaps I could use it to get up...
-  - Yes! I did it!
-  faces:
-  - {fileID: 21300000, guid: 0082df3e1edb241288e97c5fe50e4b97, type: 3}
-  - {fileID: 21300000, guid: 0082df3e1edb241288e97c5fe50e4b97, type: 3}
-  - {fileID: 21300000, guid: 0082df3e1edb241288e97c5fe50e4b97, type: 3}
-  - {fileID: 21300000, guid: 0082df3e1edb241288e97c5fe50e4b97, type: 3}
-  - {fileID: 7131390058156611545, guid: 6236baf5c81d1a448ad2eb97434a2d73, type: 3}
-  - {fileID: 7131390058156611545, guid: 6236baf5c81d1a448ad2eb97434a2d73, type: 3}
-  - {fileID: 21300000, guid: 0082df3e1edb241288e97c5fe50e4b97, type: 3}
-  - {fileID: 21300000, guid: 0082df3e1edb241288e97c5fe50e4b97, type: 3}
-  - {fileID: 21300000, guid: 0082df3e1edb241288e97c5fe50e4b97, type: 3}
-  - {fileID: 21300000, guid: 0082df3e1edb241288e97c5fe50e4b97, type: 3}
-  - {fileID: 21300000, guid: 0082df3e1edb241288e97c5fe50e4b97, type: 3}
-  - {fileID: 21300000, guid: 0082df3e1edb241288e97c5fe50e4b97, type: 3}
-  - {fileID: 21300000, guid: 0082df3e1edb241288e97c5fe50e4b97, type: 3}
-  stopIndexes: 080000000a0000000c0000000d000000
-  index: 0
-  btnContinue: {fileID: 542807531}
-  cnv: {fileID: 633097137}
-  cnvInGame: {fileID: 1772982967}
-  typingspeed: 0.02
 --- !u!4 &1641821819
 Transform:
   m_ObjectHideFlags: 0
@@ -2815,6 +2767,40 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1641821820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1641821817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de7d199faff3146699af39a3a5daa3d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Display: {fileID: 53084567}
+  Display2: {fileID: 1571196511}
+  sentences:
+  - Bill.. What's going on? Where am I?
+  - 'You will serve the science! '
+  - I dont want to! The machine is instable, it'll kill both of us
+  - I won't let you to fool me again
+  - BILL STOP IT, I'M BEGGING YOU
+  - '*explosion*'
+  faces:
+  - {fileID: 21300000, guid: 40f0743d7cd0540d38d936c3b4475b17, type: 3}
+  - {fileID: 21300000, guid: 40f0743d7cd0540d38d936c3b4475b17, type: 3}
+  - {fileID: 21300000, guid: 40f0743d7cd0540d38d936c3b4475b17, type: 3}
+  - {fileID: 21300000, guid: 40f0743d7cd0540d38d936c3b4475b17, type: 3}
+  - {fileID: 21300000, guid: 40f0743d7cd0540d38d936c3b4475b17, type: 3}
+  - {fileID: 21300000, guid: 40f0743d7cd0540d38d936c3b4475b17, type: 3}
+  stopIndexes: 000000000000000000000000000000000000000000000000
+  index: 0
+  btnContinue: {fileID: 542807531}
+  cnv: {fileID: 633097137}
+  cnvInGame: {fileID: 1772982967}
+  typingspeed: 0.02
 --- !u!1 &1772982967
 GameObject:
   m_ObjectHideFlags: 0

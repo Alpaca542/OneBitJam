@@ -35,6 +35,10 @@ public class CutSceneDialogue : MonoBehaviour
         {
             Display2.gameObject.GetComponent<RectTransform>().sizeDelta = new Vector2(300, 190);
         }
+        else if (faces[index].name == "mantexturepng")
+        {
+            Display2.gameObject.GetComponent<RectTransform>().sizeDelta = new Vector2(256, 256);
+        }
         Display2.sprite = faces[index];
         foreach (char letter1 in sentences[index].ToCharArray())
         {

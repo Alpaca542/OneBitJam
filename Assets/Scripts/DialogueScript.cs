@@ -35,9 +35,9 @@ public class DialogueScript : MonoBehaviour
         {
             Display2.gameObject.GetComponent<RectTransform>().sizeDelta = new Vector2(300, 190);
         }
-        else if (faces[index].name == "IMG_0513 (1)")
+        else if (faces[index].name == "mantexturepng")
         {
-            Display2.gameObject.GetComponent<RectTransform>().sizeDelta = new Vector2(1000, 1000);
+            Display2.gameObject.GetComponent<RectTransform>().sizeDelta = new Vector2(300, 300);
         }
         Display2.sprite = faces[index];
         foreach (char letter1 in sentences[index].ToCharArray())

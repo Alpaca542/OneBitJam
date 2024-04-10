@@ -3141,11 +3141,11 @@ MonoBehaviour:
   sentences:
   - Wha... What happened
   - Where am I?
-  - Seems like these stupid species tried to trap me
-  - Haha, it was not a good idea
+  - Seems like they tried to trap me
+  - It was not a good idea haha
   - Shut up, you, little beast
   - There is no way you're getting out of this cage
-  - Fullish human...
+  - I don't want to do this...
   - Use guard sprites on the left to control them
   - I have one more servant now
   - I might be able to use this elevator...
@@ -3157,8 +3157,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0082df3e1edb241288e97c5fe50e4b97, type: 3}
   - {fileID: 21300000, guid: 0082df3e1edb241288e97c5fe50e4b97, type: 3}
   - {fileID: 21300000, guid: 0082df3e1edb241288e97c5fe50e4b97, type: 3}
-  - {fileID: 21300000, guid: 003713170d9594a1994c7cb44b992f60, type: 3}
-  - {fileID: 21300000, guid: 003713170d9594a1994c7cb44b992f60, type: 3}
+  - {fileID: 21300000, guid: 40f0743d7cd0540d38d936c3b4475b17, type: 3}
+  - {fileID: 21300000, guid: 40f0743d7cd0540d38d936c3b4475b17, type: 3}
   - {fileID: 21300000, guid: 0082df3e1edb241288e97c5fe50e4b97, type: 3}
   - {fileID: 21300000, guid: 0082df3e1edb241288e97c5fe50e4b97, type: 3}
   - {fileID: 21300000, guid: 0082df3e1edb241288e97c5fe50e4b97, type: 3}

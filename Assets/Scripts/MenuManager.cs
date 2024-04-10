@@ -5,12 +5,48 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
-    public void OpenLvl()
+    public GameObject SmokeEffect;
+    public int lvl;
+    public void OpenLastLevel()
     {
-        SceneManager.LoadScene("Lvl1");
+        SmokeEffect.SetActive(true);
+        Invoke(nameof(InvokeOpenLastLevel), 1f);
+    }
+    public void OpenLevel(int lvl1)
+    {
+        lvl = lvl1;
+        SmokeEffect.SetActive(true);
+        Invoke(nameof(InvokeOpenLevel), 1f);
+    }
+    public void OpenLvlMenu()
+    {
+        SmokeEffect.SetActive(true);
+        Invoke(nameof(InvokeOpenLvlMenu), 1f);
+    }
+    public void OpenMenu()
+    {
+        SmokeEffect.SetActive(true);
+        Invoke(nameof(InvokeOpenMenu), 1f);
     }
     public void OpenSettings()
     {
         //settings maybe
+    }
+    public void InvokeOpenMenu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
+    public void InvokeOpenLvlMenu()
+    {
+        SceneManager.LoadScene("LvlMenu");
+    }
+    public void InvokeOpenLevel()
+    {
+        SceneManager.LoadScene("Lvl" + lvl.ToString());
+    }
+    public void InvokeOpenLastLevel()
+    {
+        SceneManager.LoadScene("Lvl" + PlayerPrefs.GetInt("CurentLevel").ToString());
+
     }
 }

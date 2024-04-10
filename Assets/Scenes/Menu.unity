@@ -645,10 +645,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 321193873}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 549.97}
-  m_SizeDelta: {x: 1088.59, y: 169.3}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: -9.09e-13, y: -135.46997}
+  m_SizeDelta: {x: 1309.48, y: 270.97998}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1268978150
 MonoBehaviour:
@@ -672,18 +672,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: e7a3f92566e90482ba2995cdac36cf6e, type: 3}
-    m_FontSize: 116
+    m_FontSize: 177
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
-    m_MaxSize: 116
-    m_Alignment: 0
+    m_MaxSize: 177
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Slime Battle(lol)
+  m_Text: Catastrophe
 --- !u!222 &1268978151
 CanvasRenderer:
   m_ObjectHideFlags: 0

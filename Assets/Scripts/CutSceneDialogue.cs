@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class CutSceneDialogue : MonoBehaviour
@@ -15,6 +16,7 @@ public class CutSceneDialogue : MonoBehaviour
     public GameObject btnContinue;
     public GameObject cnv;
     public GameObject cnvInGame;
+    public GameObject explosion1;
     public float typingspeed = 0.02f;
     IEnumerator coroutine;
 
@@ -77,10 +79,15 @@ public class CutSceneDialogue : MonoBehaviour
             {
                 GameObject.FindGameObjectWithTag("Slime").GetComponent<SlimeController>().enabled = true;
             }
-            cnvInGame.SetActive(true);
+            explosion1.SetActive(true);
+            Invoke(nameof(GoToMenu), 1f);
             btnContinue.SetActive(false);
             cnv.SetActive(false);
         }
+    }
+    public void GoToMenu()
+    {
+        SceneManager.LoadScene("LvlMenu");
     }
     private void Update()
     {

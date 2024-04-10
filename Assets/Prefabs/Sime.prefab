@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2786950727807183953}
   - component: {fileID: 7242625603239267164}
   - component: {fileID: 4448707146113403990}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4844,7 +4844,7 @@ GameObject:
   - component: {fileID: 5762895012798363237}
   - component: {fileID: 8962620603085391920}
   - component: {fileID: 2968089608244674508}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sime
   m_TagString: Slime
   m_Icon: {fileID: 0}

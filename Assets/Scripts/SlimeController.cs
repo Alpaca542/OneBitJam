@@ -8,11 +8,12 @@ public class SlimeController : MonoBehaviour
     public float speed = 5f;
     public bool Stopped = true;
     public bool AmIActive = true;
+    public bool AmIFlying = false;
     private Rigidbody2D rb;
     public ParticleSystem prt;
     void Update()
     {
-        if (AmIActive)
+        if (AmIActive && !AmIFlying)
         {
             float moveHorizontal = Input.GetAxis("Horizontal");
             if (moveHorizontal != 0)
@@ -35,6 +36,10 @@ public class SlimeController : MonoBehaviour
 
             rb.velocity = new Vector2(moveHorizontal * speed, rb.velocity.y);
         }
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        AmIFlying = false;
     }
     private void Start()
     {

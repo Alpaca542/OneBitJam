@@ -8,14 +8,14 @@ public class ButtonScript : MonoBehaviour
     public GameObject MyText;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Player")
+        if(collision.gameObject.tag == "Player" || collision.gameObject.tag == "Box" || collision.gameObject.tag == "Slime")
         {
             GetComponent<BoxCollider2D>().size = new Vector2(GetComponent<BoxCollider2D>().size.x, 20);
             if (MyText != null)
             {
                 MyText.SetActive(false);
             }
-            transform.localScale = new Vector2(0.6f, 0.05f);
+            transform.localScale = new Vector2(transform.localScale.x, 0.05f);
             if (WhatIsConnected.tag == "Elevator")
             {
                 WhatIsConnected.GetComponent<ElevatorScript>().DoWeGoUp = true;
@@ -29,13 +29,13 @@ public class ButtonScript : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         GetComponent<BoxCollider2D>().size = new Vector2(GetComponent<BoxCollider2D>().size.x, 4);
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Box" || collision.gameObject.tag == "Slime")
         {
             if (MyText != null)
             {
                 MyText.SetActive(true);
             }
-            transform.localScale = new Vector2(0.6f, 0.1f);
+            transform.localScale = new Vector2(transform.localScale.x, 0.1f);
             if (WhatIsConnected.tag == "Elevator")
             {
                 WhatIsConnected.GetComponent<ElevatorScript>().DoWeGoUp = false;

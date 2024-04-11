@@ -13,6 +13,10 @@ public class Forcer : MonoBehaviour
             {
                 collision.gameObject.GetComponent<Player>().AmIFlying = true;
             }
+            if (collision.gameObject.tag == "Slime")
+            {
+                collision.gameObject.GetComponent<SlimeController>().AmIFlying = true;
+            }
 
             collision.gameObject.GetComponent<Rigidbody2D>().AddForce(transform.up * Strength);
         }

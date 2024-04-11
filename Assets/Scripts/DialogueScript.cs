@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class DialogueScript : MonoBehaviour
@@ -51,9 +52,12 @@ public class DialogueScript : MonoBehaviour
     }
     private void Start()
     {
-        cnv.SetActive(true);
-        coroutine = Type();
-        StartCoroutine(coroutine);
+        if (SceneManager.GetActiveScene().name == "Lvl2")
+        {
+            cnv.SetActive(true);
+            coroutine = Type();
+            StartCoroutine(coroutine);
+        }
     }
     public void Stststtst()
     {
@@ -89,7 +93,7 @@ public class DialogueScript : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
+        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return)) && cnv.activeSelf)
         {
             StopCoroutine(coroutine);
             Display.text = sentences[index];

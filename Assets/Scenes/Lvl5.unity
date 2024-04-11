@@ -1744,6 +1744,24 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6110052433495536695, guid: 81977acb074854d3a9545650e8b31ac3, type: 3}
   m_PrefabInstance: {fileID: 1879165314}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &825988909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 825988902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e885a81f5fdd242f8bf8328f24693359, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rayer2: {fileID: 1677350899}
+  blt: {fileID: 5751253421150794174, guid: f12a1a8d10012482b86e29f283e706ce, type: 3}
+  whattohit:
+    serializedVersion: 2
+    m_Bits: 201
+  shtng: 0
 --- !u!1 &843588158
 GameObject:
   m_ObjectHideFlags: 0
@@ -3107,6 +3125,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1677350899 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4717390558375264070, guid: 81977acb074854d3a9545650e8b31ac3, type: 3}
+  m_PrefabInstance: {fileID: 1879165314}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1747767072
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3377,7 +3400,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2890960954664312626, guid: 81977acb074854d3a9545650e8b31ac3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.3027608
+      value: -3.56
       objectReference: {fileID: 0}
     - target: {fileID: 2890960954664312626, guid: 81977acb074854d3a9545650e8b31ac3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3418,7 +3441,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6110052433495536695, guid: 81977acb074854d3a9545650e8b31ac3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 825988909}
   m_SourcePrefab: {fileID: 100100000, guid: 81977acb074854d3a9545650e8b31ac3, type: 3}
 --- !u!1 &1968481278
 GameObject:

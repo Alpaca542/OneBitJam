@@ -25,6 +25,10 @@ public class Player : MonoBehaviour
         playerList = GameObject.FindGameObjectsWithTag("Player");
         rb = GetComponent<Rigidbody2D>();
     }
+    private void OnEnable()
+    {
+        //cursor change
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         AmIFlying = false;

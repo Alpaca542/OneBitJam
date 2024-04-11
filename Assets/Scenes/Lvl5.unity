@@ -3003,11 +3003,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1519598892404794127, guid: 1af1674e062e1b04cad6df944f1b9724, type: 3}
       propertyPath: m_Size.x
-      value: 6.010002
+      value: 7.999194
       objectReference: {fileID: 0}
     - target: {fileID: 1519598892404794127, guid: 1af1674e062e1b04cad6df944f1b9724, type: 3}
       propertyPath: m_Offset.x
-      value: -0.9963759
+      value: -0.0017800331
       objectReference: {fileID: 0}
     - target: {fileID: 1519598892404794127, guid: 1af1674e062e1b04cad6df944f1b9724, type: 3}
       propertyPath: m_Offset.y
@@ -3236,7 +3236,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1772982968
 MonoBehaviour:
   m_ObjectHideFlags: 0

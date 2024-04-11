@@ -37,7 +37,7 @@ public class SlimeController : MonoBehaviour
             rb.velocity = new Vector2(moveHorizontal * speed, rb.velocity.y);
         }
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionStay2D(Collision2D collision)
     {
         AmIFlying = false;
     }

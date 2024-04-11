@@ -42,10 +42,10 @@ public class Player : MonoBehaviour
             float moveHorizontal = Input.GetAxis("Horizontal");
             if(moveHorizontal!=0)
             {
-                if (moveHorizontal > 0)
-                    myplayerbody.transform.rotation = Quaternion.Euler(0, 0, 0);
-                else
-                    myplayerbody.transform.rotation = Quaternion.Euler(0, 180, 0);
+                if (moveHorizontal > 0 && transform.rotation != Quaternion.Euler(0, 0, 0))
+                    transform.rotation = Quaternion.Euler(0, 0, 0);
+                else if (transform.rotation != Quaternion.Euler(0, -180, 0) && transform.rotation != Quaternion.Euler(0, 180, 0))
+                    transform.rotation = Quaternion.Euler(0, 180, 0);
                 myAnimator.SetBool("walkAnimation", true);
             }
             else

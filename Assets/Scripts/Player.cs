@@ -42,25 +42,11 @@ public class Player : MonoBehaviour
                     myplayerbody.transform.rotation = Quaternion.Euler(0, 0, 0);
                 else
                     myplayerbody.transform.rotation = Quaternion.Euler(0, 180, 0);
-                if (gameObject.name.Contains("Player2"))
-                {
-                    myAnimator.SetBool("walkAnimation2", true);
-                }
-                else
-                {
-                    myAnimator.SetBool("walkAnimation", true);
-                }
+                myAnimator.SetBool("walkAnimation", true);
             }
             else
             {
-                if (gameObject.name.Contains("Player2"))
-                {
-                    myAnimator.SetBool("walkAnimation2", false);
-                }
-                else
-                {
-                    myAnimator.SetBool("walkAnimation", false);
-                }
+                myAnimator.SetBool("walkAnimation", false);
             }
             
             rb.velocity = new Vector2(moveHorizontal*speed, rb.velocity.y);
@@ -73,14 +59,7 @@ public class Player : MonoBehaviour
         }
         if (rb.velocity == Vector2.zero)
         {
-            if (gameObject.name.Contains("Player2"))
-            {
-                myAnimator.SetBool("walkAnimation2", false);
-            }
-            else
-            {
-                myAnimator.SetBool("walkAnimation", false);
-            }
+            myAnimator.SetBool("walkAnimation", false);
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)

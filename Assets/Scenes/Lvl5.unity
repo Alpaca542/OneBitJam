@@ -905,7 +905,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerList:
   - {fileID: 2052144525}
-  - {fileID: 0}
+  - {fileID: 825988902}
+  - {fileID: 1112229579}
   BtnList:
   - {fileID: 1416102483}
   - {fileID: 843588158}
@@ -1738,6 +1739,11 @@ Transform:
   - {fileID: 2052144531}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &825988902 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6110052433495536695, guid: 81977acb074854d3a9545650e8b31ac3, type: 3}
+  m_PrefabInstance: {fileID: 1879165314}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &843588158
 GameObject:
   m_ObjectHideFlags: 0
@@ -2146,6 +2152,11 @@ PrefabInstance:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3342036052735823439, guid: a2c8d3cb66d0d4be2b9e2cf8aeeb0de7, type: 3}
   m_PrefabInstance: {fileID: 990527409}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1112229579 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 951883986848142436, guid: c8507dd02bfb5e94f886adb95dca0ae8, type: 3}
+  m_PrefabInstance: {fileID: 615564080}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1136824428
 GameObject:

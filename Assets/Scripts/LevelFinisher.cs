@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class LevelFinisher : MonoBehaviour
 {
     public GameObject panelForTheEnd;
+    public DialogueScript dlgmng;
     public GameObject SmokeEffect;
     public void StopTheLevel()
     {
@@ -14,7 +15,15 @@ public class LevelFinisher : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        StopTheLevel();
+        if(collision.gameObject.tag == "Slime")
+        {
+            StopTheLevel();
+        }
+        else if(collision.gameObject.tag == "Player")
+        {
+            dlgmng.Stststtst();
+            dlgmng.index--;
+        }
     }
     public void OnNextPressed()
     {

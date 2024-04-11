@@ -3107,6 +3107,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelFinisher
       objectReference: {fileID: 0}
+    - target: {fileID: 8146186312290254657, guid: 00bd6a469c63e431ba5b8bae5b0b3afb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -36,7 +36,7 @@ public class DialogueScript : MonoBehaviour
         Display.text = "";
         if (faces[index].name == "SlimeTexture")
         {
-            Display2.gameObject.GetComponent<RectTransform>().sizeDelta = new Vector2(300, 190);
+            Display2.gameObject.GetComponent<RectTransform>().sizeDelta = new Vector2(300, 140);
         }
         else if (faces[index].name == "mantexturepng")
         {

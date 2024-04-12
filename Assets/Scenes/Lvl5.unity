@@ -5288,9 +5288,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Display: {fileID: 53084567}
   Display2: {fileID: 1571196511}
-  sentences: []
-  faces: []
-  stopIndexes: 
+  sentences:
+  - I need to leave the room myself, not in a human body
+  - I need to leave the room myself, not in a human body
+  faces:
+  - {fileID: 21300000, guid: 0082df3e1edb241288e97c5fe50e4b97, type: 3}
+  - {fileID: 21300000, guid: 0082df3e1edb241288e97c5fe50e4b97, type: 3}
+  stopIndexes: 0000000001000000
   index: 0
   btnContinue: {fileID: 542807531}
   cnv: {fileID: 633097137}

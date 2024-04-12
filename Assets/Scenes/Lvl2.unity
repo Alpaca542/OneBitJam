@@ -3601,8 +3601,8 @@ MonoBehaviour:
   - I might be able to use this elevator...
   - That looks like a good trampoline
   - Perhaps I could use it to get up...
-  - I need to leave the room myself, not in a human's body
-  - I need to leave the room myself, not in a human's body
+  - I need to leave the room myself, not in a human body
+  - I need to leave the room myself, not in a human body
   faces:
   - {fileID: 21300000, guid: 0082df3e1edb241288e97c5fe50e4b97, type: 3}
   - {fileID: 21300000, guid: 0082df3e1edb241288e97c5fe50e4b97, type: 3}
@@ -3687,6 +3687,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6642506016265988871, guid: 00bd6a469c63e431ba5b8bae5b0b3afb, type: 3}
+      propertyPath: dlgmng
+      value: 
+      objectReference: {fileID: 1641821818}
     - target: {fileID: 6642506016265988871, guid: 00bd6a469c63e431ba5b8bae5b0b3afb, type: 3}
       propertyPath: SmokeEffect
       value: 

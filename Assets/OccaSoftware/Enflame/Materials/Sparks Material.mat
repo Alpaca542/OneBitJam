@@ -17,7 +17,7 @@ Material:
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3050
+  m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
   m_LockedProperties: 
@@ -91,7 +91,7 @@ Material:
     - Vector1_63C98F54: 3
     - Vector1_79F969CA: 0
     - Vector1_9030F466: 0.3
-    - Vector1_CFB18C85: 0.506
+    - Vector1_CFB18C85: 0.581
     - Vector1_E964C341: 6
     - _AlphaClip: 0
     - _Blend: 0

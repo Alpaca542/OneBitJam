@@ -3546,6 +3546,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 898278745}
     - target: {fileID: 6518491940048521421, guid: 4a628de7455e24cbb80d721d9c10751d, type: 3}
+      propertyPath: AmILiftable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6518491940048521421, guid: 4a628de7455e24cbb80d721d9c10751d, type: 3}
       propertyPath: WhatIsConnected
       value: 
       objectReference: {fileID: 55398920}

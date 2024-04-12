@@ -7,11 +7,18 @@ public class ButtonScript : MonoBehaviour
     public GameObject WhatIsConnected;
     public GameObject MyText;
     public bool AmILiftable;
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "Player" || collision.gameObject.tag == "Box" || collision.gameObject.tag == "Slime")
         {
-            GetComponent<BoxCollider2D>().size = new Vector2(GetComponent<BoxCollider2D>().size.x, 20);
+            if (AmILiftable)
+            {
+                GetComponent<BoxCollider2D>().size = new Vector2(GetComponent<BoxCollider2D>().size.x, 50);
+            }
+            else
+            {
+                GetComponent<BoxCollider2D>().size = new Vector2(GetComponent<BoxCollider2D>().size.x, 20);
+            }
             if (MyText != null)
             {
                 MyText.SetActive(false);

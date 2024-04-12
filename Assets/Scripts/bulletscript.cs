@@ -6,7 +6,7 @@ public class bulletscript : MonoBehaviour
 {
     private void Awake()
     {
-        Invoke(nameof(DieInThreeSeconds), 3f);
+        Invoke(nameof(DieInThreeSeconds), 2f);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

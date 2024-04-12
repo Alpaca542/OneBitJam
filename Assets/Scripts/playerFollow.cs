@@ -13,7 +13,7 @@ public class playerFollow : MonoBehaviour
         GameObject[] playerlist = GameObject.FindGameObjectsWithTag("Player");
         foreach(GameObject playerFromList in playerlist)
         {
-            if(playerFromList.GetComponent<Player>().AmIActive == true) {
+            if(playerFromList.GetComponent<Player>().enabled == true) {
                 player = playerFromList;
             
             }

@@ -13,21 +13,26 @@ public class Player : MonoBehaviour
 
     [Header("Debug")]
     public LayerMask WhatToCheckOnJump;
-    public bool AmIActive = false;
     public bool AmIFlying = false;
-    private GameObject[] playerList;
     public Transform rayer;
+    public Texture2D cursorTexture;
 
     private Rigidbody2D rb;
 
     void Start()
     {
-        playerList = GameObject.FindGameObjectsWithTag("Player");
         rb = GetComponent<Rigidbody2D>();
     }
     private void OnEnable()
     {
-        //cursor change
+        if (gameObject.name.Contains("Player2"))
+        {
+            Cursor.SetCursor(cursorTexture, Vector2.zero, CursorMode.Auto);
+        }
+        else
+        {
+            Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+        }
     }
     private void OnCollisionStay2D(Collision2D collision)
     {
@@ -35,7 +40,7 @@ public class Player : MonoBehaviour
     }
     void Update()
     {
-        if (AmIActive && !AmIFlying)
+        if (!AmIFlying)
         {
             //Move
             
@@ -64,24 +69,6 @@ public class Player : MonoBehaviour
         if (rb.velocity == Vector2.zero)
         {
             myAnimator.SetBool("walkAnimation", false);
-        }
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Slime" && !AmIActive)
-        {
-            foreach (GameObject gmb in playerList)
-            {
-                if (gmb != gameObject)
-                {
-                    gmb.GetComponent<Light2D>().enabled = false;
-                    gmb.GetComponent<Player>().AmIActive = false;
-                }
-            }
-            GetComponent<Light2D>().enabled = true;
-            AmIActive = true;
-            Camera.main.gameObject.GetComponent<playerFollow>().player = gameObject;
-            collision.gameObject.SetActive(false);
         }
     }
 }

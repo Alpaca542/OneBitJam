@@ -22,14 +22,14 @@ public class ManageTransformation : MonoBehaviour
             foreach (GameObject gmb in playerList)
             {
                 gmb.GetComponent<Light2D>().enabled = false;
-                gmb.GetComponent<Player>().AmIActive = false;
+                gmb.GetComponent<Player>().enabled = false;
             }
-            slime.GetComponent<SlimeController>().AmIActive = false;
+            slime.GetComponent<SlimeController>().enabled = false;
             slime.GetComponent<Light2D>().enabled = false;
             ln = Instantiate(line, slime.transform.position, Quaternion.identity);
             ln.GetComponent<LineThatFollows>().WhatToFollow = playerList[BtnNumber];
             playerList[BtnNumber].GetComponent<Light2D>().enabled = true;
-            playerList[BtnNumber].GetComponent<Player>().AmIActive = true;
+            playerList[BtnNumber].GetComponent<Player>().enabled = true;
             Camera.main.GetComponent<playerFollow>().player = playerList[BtnNumber];
         }
     }
@@ -39,9 +39,9 @@ public class ManageTransformation : MonoBehaviour
         foreach (GameObject gmb in playerList)
         {
             gmb.GetComponent<Light2D>().enabled = false;
-            gmb.GetComponent<Player>().AmIActive = false;
+            gmb.GetComponent<Player>().enabled = false;
         }
-        slime.GetComponent<SlimeController>().AmIActive = true;
+        slime.GetComponent<SlimeController>().enabled = true;
         slime.GetComponent<Light2D>().enabled = true;
         Camera.main.GetComponent<playerFollow>().player = slime;
     }

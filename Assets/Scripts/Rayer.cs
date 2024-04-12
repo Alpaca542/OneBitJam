@@ -1,34 +1,86 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Drawing;
 using UnityEngine;
-using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class Rayer : MonoBehaviour
 {
-    public Player plr;
+    public GameObject plr;
+    public GameObject blt;
     void Update()
     {
-        if (!plr.AmIActive)
+        if (!plr.GetComponent<Player>().enabled)
         {
             Vector3 diff = Camera.main.GetComponent<playerFollow>().player.transform.position - transform.position;
             diff.Normalize();
             float rot_z = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.Euler(0f, 0f, rot_z);
-            //Debug.Log(rayer2.transform.rotation.z);
-            //Debug.Log(rayer2.transform.localRotation.z);
-            float realangle = transform.eulerAngles.z;
-            if (transform.eulerAngles.z > 180)
+            if (plr.transform.rotation == Quaternion.Euler(0, 180, 0) || plr.transform.rotation == Quaternion.Euler(0, -180, 0))
             {
-                realangle = -(360-transform.eulerAngles.z);
+                float realangle = (180 - rot_z);
+                if (realangle > 180f)
+                    realangle -= 360f;
+                transform.localRotation = Quaternion.Euler(0f, 0f, 180 - rot_z);
+                if (realangle > 50)
+                {
+                    transform.localRotation = Quaternion.Euler(0, 0, 50);
+                }
+                if (realangle < -40)
+                {
+                    transform.localRotation = Quaternion.Euler(0, 0, -40);
+                }
             }
-            if (realangle > 50)
+            else
             {
-                transform.rotation = Quaternion.Euler(0, 0, 50);
+                transform.localRotation = Quaternion.Euler(0f, 0f, rot_z);
+                if ((rot_z) > 50)
+                {
+                    transform.localRotation = Quaternion.Euler(0, 0, 50);
+                }
+                if ((rot_z) < -40)
+                {
+                    transform.localRotation = Quaternion.Euler(0, 0, -40);
+                }
+
             }
-            if (realangle < -40)
+        }
+        else
+        {
+            if (Input.GetMouseButtonDown(0))
             {
-                transform.rotation = Quaternion.Euler(0, 0, -40);
+                GameObject projectile = Instantiate(blt, transform.position, transform.rotation);
+                projectile.GetComponent<Rigidbody2D>().AddForce(transform.right * 500f);
+            }
+            Vector3 diff = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+            diff.Normalize();
+            float rot_z = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
+
+            if(plr.transform.rotation == Quaternion.Euler(0, 180, 0) || plr.transform.rotation == Quaternion.Euler(0, -180, 0))
+            {
+                float realangle = (180 - rot_z);
+                if (realangle > 180f)
+                    realangle -= 360f;
+
+                transform.localRotation = Quaternion.Euler(0f, 0f, 180-rot_z);
+                if (realangle > 50)
+                {
+                    transform.localRotation = Quaternion.Euler(0, 0, 50);
+                }
+                if (realangle < -40)
+                {
+                    transform.localRotation = Quaternion.Euler(0, 0, -40);
+                }
+            }
+            else
+            {
+                transform.localRotation = Quaternion.Euler(0f, 0f, rot_z);
+                if ((rot_z) > 50)
+                {
+                    transform.localRotation = Quaternion.Euler(0, 0, 50);
+                }
+                if ((rot_z) < -40)
+                {
+                    transform.localRotation = Quaternion.Euler(0, 0, -40);
+                }
+
             }
         }
     }

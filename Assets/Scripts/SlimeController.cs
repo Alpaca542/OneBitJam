@@ -7,13 +7,12 @@ public class SlimeController : MonoBehaviour
 {
     public float speed = 5f;
     public bool Stopped = true;
-    public bool AmIActive = true;
     public bool AmIFlying = false;
     private Rigidbody2D rb;
     public ParticleSystem prt;
     void Update()
     {
-        if (AmIActive && !AmIFlying)
+        if (!AmIFlying)
         {
             float moveHorizontal = Input.GetAxis("Horizontal");
             if (moveHorizontal != 0)

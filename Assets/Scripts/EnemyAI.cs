@@ -11,7 +11,7 @@ public class EnemyAI : MonoBehaviour
     public bool shtng = false;
     private void Update()
     {
-        if (!gameObject.GetComponent<Player>().AmIActive)
+        if (!gameObject.GetComponent<Player>().enabled)
         {
             if (Physics2D.Raycast(rayer2.transform.position, rayer2.transform.right, 5f, whattohit))
             {
@@ -34,7 +34,7 @@ public class EnemyAI : MonoBehaviour
     }
     public void InvokeShoot()
     {
-        GameObject projectile = Instantiate(blt, rayer2.transform.position, Quaternion.identity);
+        GameObject projectile = Instantiate(blt, rayer2.transform.position, rayer2.transform.rotation);
         projectile.GetComponent<Rigidbody2D>().AddForce(rayer2.transform.right*500f);
     }
 }

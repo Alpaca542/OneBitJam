@@ -12,19 +12,23 @@ public class bulletscript : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
-            collision.gameObject.GetComponent<Rigidbody2D>().AddForce(transform.up);
+            collision.gameObject.GetComponent<Rigidbody2D>().AddForce(transform.right * 200f);
             collision.gameObject.GetComponent<Player>().AmIFlying = true;
             Destroy(gameObject);
         }
         if (collision.gameObject.tag == "Slime")
         {
-            collision.gameObject.GetComponent<Rigidbody2D>().AddForce(transform.up);
+            collision.gameObject.GetComponent<Rigidbody2D>().AddForce(transform.right * 200f);
             collision.gameObject.GetComponent<SlimeController>().AmIFlying = true;
             Destroy(gameObject);
         }
         if (collision.gameObject.tag == "Box")
         {
-            collision.gameObject.GetComponent<Rigidbody2D>().AddForce(transform.up);
+            collision.gameObject.GetComponent<Rigidbody2D>().AddForce(transform.right * 200f);
+            Destroy(gameObject);
+        }
+        else
+        {
             Destroy(gameObject);
         }
     }

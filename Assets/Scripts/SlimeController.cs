@@ -10,6 +10,10 @@ public class SlimeController : MonoBehaviour
     public bool AmIFlying = false;
     private Rigidbody2D rb;
     public ParticleSystem prt;
+    private void OnEnable()
+    {
+        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+    }
     void Update()
     {
         if (!AmIFlying)

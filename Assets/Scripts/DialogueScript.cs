@@ -52,7 +52,7 @@ public class DialogueScript : MonoBehaviour
     }
     private void Start()
     {
-        if (SceneManager.GetActiveScene().name == "Lvl2")
+        if (SceneManager.GetActiveScene().name == "Lvl2" || SceneManager.GetActiveScene().name == "Lvl5")
         {
             cnv.SetActive(true);
             coroutine = Type();

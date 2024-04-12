@@ -6,6 +6,7 @@ public class ButtonScript : MonoBehaviour
 {
     public GameObject WhatIsConnected;
     public GameObject MyText;
+    public bool AmILiftable;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "Player" || collision.gameObject.tag == "Box" || collision.gameObject.tag == "Slime")
@@ -35,7 +36,14 @@ public class ButtonScript : MonoBehaviour
             {
                 MyText.SetActive(true);
             }
-            transform.localScale = new Vector2(transform.localScale.x, 0.1f);
+            if (AmILiftable)
+            {
+                transform.localScale = new Vector2(transform.localScale.x, 0.4116f);
+            }
+            else
+            {
+                transform.localScale = new Vector2(transform.localScale.x, 0.1f);
+            }
             if (WhatIsConnected.tag == "Elevator")
             {
                 WhatIsConnected.GetComponent<ElevatorScript>().DoWeGoUp = false;

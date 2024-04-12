@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1350891384207390700}
+  - component: {fileID: 5617515265874508591}
   m_Layer: 6
   m_Name: rayer2
   m_TagString: Untagged
@@ -28,9 +29,23 @@ Transform:
   m_LocalPosition: {x: 0.518, y: 0.289, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 7524473188836232354}
   m_Father: {fileID: 2890960954664312626}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5617515265874508591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4717390558375264070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 942c9c4c305b74984a6d38ffbbe992eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plr: {fileID: 9035570494835765446}
 --- !u!1 &5647036799967742543
 GameObject:
   m_ObjectHideFlags: 0
@@ -87,12 +102,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5976858011926795281}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: 0.70801747, w: 0.706195}
-  m_LocalPosition: {x: 0.14429748, y: 1.7082068, z: 0}
-  m_LocalScale: {x: 0.16999996, y: 0.16999996, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.123980165, y: 0.0062836707, z: 0}
+  m_LocalScale: {x: 0.058808096, y: 0.058808096, z: 0.34593}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1257132820216265366}
+  m_Father: {fileID: 1350891384207390700}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8375909543807606608
 SpriteRenderer:
@@ -251,9 +266,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 2
   m_AngularDrag: 0.05
-  m_GravityScale: 3
+  m_GravityScale: 3.4
   m_Material: {fileID: 6200000, guid: a2daa58ce0b0544bfa4b45ef136d2ae2, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
@@ -280,7 +295,7 @@ MonoBehaviour:
   myplayerbody: {fileID: 3278692078246755646}
   myAnimator: {fileID: 8953417147615708980}
   speed: 5
-  jumpForce: 550
+  jumpForce: 650
   WhatToCheckOnJump:
     serializedVersion: 2
     m_Bits: 72
@@ -534,20 +549,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 4257508509235537429, guid: 6236baf5c81d1a448ad2eb97434a2d73, type: 3}
-      insertIndex: 1
-      addedObject: {fileID: 7524473188836232354}
+    m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: 6236baf5c81d1a448ad2eb97434a2d73, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8953417147615708980}
   m_SourcePrefab: {fileID: 4843985084834002234, guid: 6236baf5c81d1a448ad2eb97434a2d73, type: 3}
---- !u!4 &1257132820216265366 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4257508509235537429, guid: 6236baf5c81d1a448ad2eb97434a2d73, type: 3}
-  m_PrefabInstance: {fileID: 3055567883872918659}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3278692078246755646 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8653719598885068355, guid: 6236baf5c81d1a448ad2eb97434a2d73, type: 3}

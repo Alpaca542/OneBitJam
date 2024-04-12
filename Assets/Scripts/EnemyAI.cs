@@ -13,7 +13,7 @@ public class EnemyAI : MonoBehaviour
     {
         if (!gameObject.GetComponent<Player>().AmIActive)
         {
-            if(Physics2D.Raycast(rayer2.transform.position, transform.right, 5f, whattohit))
+            if (Physics2D.Raycast(rayer2.transform.position, rayer2.transform.right, 5f, whattohit))
             {
                 if (!shtng)
                 {
@@ -27,10 +27,14 @@ public class EnemyAI : MonoBehaviour
                 CancelInvoke(nameof(InvokeShoot));
             }
         }
+        else
+        {
+            CancelInvoke(nameof(InvokeShoot));
+        }
     }
     public void InvokeShoot()
     {
         GameObject projectile = Instantiate(blt, rayer2.transform.position, Quaternion.identity);
-        projectile.GetComponent<Rigidbody2D>().AddForce(transform.right*500f);
+        projectile.GetComponent<Rigidbody2D>().AddForce(rayer2.transform.right*500f);
     }
 }

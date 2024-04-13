@@ -19,9 +19,9 @@ public class LevelFinisher : MonoBehaviour
             if (SceneManager.GetActiveScene().name == "Lvl2" || SceneManager.GetActiveScene().name == "Lvl3")
                 Camera.main.GetComponent<Camera>().orthographicSize = 10f;
             if (SceneManager.GetActiveScene().name == "Lvl4")
-                Camera.main.GetComponent<Camera>().orthographicSize = 15f;
+                Camera.main.GetComponent<Camera>().orthographicSize = 10f;
             if (SceneManager.GetActiveScene().name == "Lvl4")
-                Camera.main.GetComponent<Camera>().orthographicSize = 20f;
+                Camera.main.GetComponent<Camera>().orthographicSize = 15f;
             Camera.main.GetComponent<playerFollow>().enabled = false;
             Camera.main.transform.position = new Vector3(explosion1.transform.position.x, explosion1.transform.position.y, -10);
 

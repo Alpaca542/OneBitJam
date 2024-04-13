@@ -5717,6 +5717,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 290675601}
     - target: {fileID: 6642506016265988871, guid: 00bd6a469c63e431ba5b8bae5b0b3afb, type: 3}
+      propertyPath: panelForPause
+      value: 
+      objectReference: {fileID: 1719787310}
+    - target: {fileID: 6642506016265988871, guid: 00bd6a469c63e431ba5b8bae5b0b3afb, type: 3}
       propertyPath: panelForTheEnd
       value: 
       objectReference: {fileID: 1540487035}

@@ -1830,6 +1830,72 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -45.712}
+--- !u!1001 &453027648
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 740946768897784986, guid: a2c8d3cb66d0d4be2b9e2cf8aeeb0de7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8.329937
+      objectReference: {fileID: 0}
+    - target: {fileID: 740946768897784986, guid: a2c8d3cb66d0d4be2b9e2cf8aeeb0de7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.0905433
+      objectReference: {fileID: 0}
+    - target: {fileID: 740946768897784986, guid: a2c8d3cb66d0d4be2b9e2cf8aeeb0de7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 740946768897784986, guid: a2c8d3cb66d0d4be2b9e2cf8aeeb0de7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 740946768897784986, guid: a2c8d3cb66d0d4be2b9e2cf8aeeb0de7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 740946768897784986, guid: a2c8d3cb66d0d4be2b9e2cf8aeeb0de7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 740946768897784986, guid: a2c8d3cb66d0d4be2b9e2cf8aeeb0de7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 740946768897784986, guid: a2c8d3cb66d0d4be2b9e2cf8aeeb0de7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 740946768897784986, guid: a2c8d3cb66d0d4be2b9e2cf8aeeb0de7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 740946768897784986, guid: a2c8d3cb66d0d4be2b9e2cf8aeeb0de7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3342036052735823439, guid: a2c8d3cb66d0d4be2b9e2cf8aeeb0de7, type: 3}
+      propertyPath: m_Name
+      value: Sime
+      objectReference: {fileID: 0}
+    - target: {fileID: 8962620603085391920, guid: a2c8d3cb66d0d4be2b9e2cf8aeeb0de7, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a2c8d3cb66d0d4be2b9e2cf8aeeb0de7, type: 3}
+--- !u!1 &453027649 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3342036052735823439, guid: a2c8d3cb66d0d4be2b9e2cf8aeeb0de7, type: 3}
+  m_PrefabInstance: {fileID: 453027648}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &487033446
 GameObject:
   m_ObjectHideFlags: 0
@@ -5087,12 +5153,14 @@ MonoBehaviour:
   - I dont want to! The machine is instable, it'll kill both of us
   - I won't let you to fool me again
   - BILL STOP IT, I'M BEGGING YOU
+  - Oh no...
   faces:
   - {fileID: 21300000, guid: 40f0743d7cd0540d38d936c3b4475b17, type: 3}
   - {fileID: 21300000, guid: 40f0743d7cd0540d38d936c3b4475b17, type: 3}
   - {fileID: 21300000, guid: 40f0743d7cd0540d38d936c3b4475b17, type: 3}
   - {fileID: 21300000, guid: 40f0743d7cd0540d38d936c3b4475b17, type: 3}
   - {fileID: 21300000, guid: 40f0743d7cd0540d38d936c3b4475b17, type: 3}
+  - {fileID: 21300000, guid: 0082df3e1edb241288e97c5fe50e4b97, type: 3}
   stopIndexes: 05000000
   index: 0
   btnContinue: {fileID: 542807531}
@@ -5101,6 +5169,8 @@ MonoBehaviour:
   explosion1: {fileID: 2125327190}
   typingspeed: 0.02
   finisher: {fileID: 145166769}
+  player: {fileID: 2052144525}
+  slime: {fileID: 453027649}
 --- !u!1 &1772982967
 GameObject:
   m_ObjectHideFlags: 0
@@ -6131,3 +6201,4 @@ SceneRoots:
   - {fileID: 1618474624}
   - {fileID: 736827816}
   - {fileID: 1457970535}
+  - {fileID: 453027648}

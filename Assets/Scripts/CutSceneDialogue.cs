@@ -19,6 +19,8 @@ public class CutSceneDialogue : MonoBehaviour
     public GameObject explosion1;
     public float typingspeed = 0.02f;
     public GameObject finisher;
+    public GameObject player;
+    public GameObject slime;
     IEnumerator coroutine;
 
     IEnumerator Type()
@@ -65,30 +67,30 @@ public class CutSceneDialogue : MonoBehaviour
     public void ContinueTyping()
     {
         index++;
-        if (Array.IndexOf(stopIndexes, index) == -1)
+        if (index == 5)
+        {
+            explosion1.SetActive(true);
+            player.SetActive(false);
+            slime.SetActive(true);
+            Invoke(nameof(LastWords), 0.8f);
+            btnContinue.SetActive(false);
+            cnv.SetActive(false);
+        }
+        else if(index == 6)
+        {
+            finisher.GetComponent<LevelFinisher>().StopTheLevel();
+        }
+        else
         {
             coroutine = Type();
             StartCoroutine(coroutine);
         }
-        else
-        {
-            if (Camera.main.GetComponent<playerFollow>().player.tag == "Player")
-            {
-                Camera.main.GetComponent<playerFollow>().player.GetComponent<Player>().enabled = true;
-            }
-            else
-            {
-                GameObject.FindGameObjectWithTag("Slime").GetComponent<SlimeController>().enabled = true;
-            }
-            explosion1.SetActive(true);
-            Invoke(nameof(GoToMenu), 0.8f);
-            btnContinue.SetActive(false);
-            cnv.SetActive(false);
-        }
     }
-    public void GoToMenu()
+    public void LastWords()
     {
-        finisher.GetComponent<LevelFinisher>().StopTheLevel();
+        cnv.SetActive(true);
+        coroutine = Type();
+        StartCoroutine(coroutine);
     }
     private void Update()
     {

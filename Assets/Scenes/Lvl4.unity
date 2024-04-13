@@ -4598,7 +4598,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4588529387271765284, guid: c244276921a364421bee0ace8e26a25c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -23.8
+      value: -35.1
       objectReference: {fileID: 0}
     - target: {fileID: 5378825259250666081, guid: c244276921a364421bee0ace8e26a25c, type: 3}
       propertyPath: m_Name
@@ -8616,7 +8616,7 @@ MonoBehaviour:
   TopPos: {fileID: 4839107081967473443}
   BottomPos: {fileID: 4168868942842383545}
   DoWeGoUp: 0
-  speed: 10
+  speed: 2
   platf: {fileID: 8833369076202578983}
 --- !u!4 &1745693145520115077
 Transform:

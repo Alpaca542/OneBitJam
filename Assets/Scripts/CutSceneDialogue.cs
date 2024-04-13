@@ -67,7 +67,7 @@ public class CutSceneDialogue : MonoBehaviour
     public void ContinueTyping()
     {
         index++;
-        if (index == 5)
+        if (index == 5 && SceneManager.GetActiveScene().name == "Lvl1")
         {
             explosion1.SetActive(true);
             player.SetActive(false);
@@ -76,9 +76,29 @@ public class CutSceneDialogue : MonoBehaviour
             btnContinue.SetActive(false);
             cnv.SetActive(false);
         }
-        else if(index == 6)
+        else if(index == 6 && SceneManager.GetActiveScene().name == "Lvl1")
         {
             finisher.GetComponent<LevelFinisher>().StopTheLevel();
+        }
+        else if (index == stopIndexes[0] && SceneManager.GetActiveScene().name == "Lvl6")
+        {
+            if (Camera.main.GetComponent<playerFollow>().player.tag == "Player")
+            {
+                Camera.main.GetComponent<playerFollow>().player.GetComponent<Player>().enabled = true;
+            }
+            else
+            {
+                GameObject.FindGameObjectWithTag("Slime").GetComponent<SlimeController>().enabled = true;
+            }
+            cnvInGame.SetActive(true);
+            btnContinue.SetActive(false);
+            cnv.SetActive(false);
+        }
+        else if (index == stopIndexes[1] && SceneManager.GetActiveScene().name == "Lvl6")
+        {
+            cnv.SetActive(false);
+            explosion1.SetActive(true);
+            Invoke(nameof(finishlevel), 0.8f);
         }
         else
         {
@@ -91,6 +111,10 @@ public class CutSceneDialogue : MonoBehaviour
         cnv.SetActive(true);
         coroutine = Type();
         StartCoroutine(coroutine);
+    }
+    public void finishlevel()
+    {
+        finisher.GetComponent<LevelFinisher>().StopTheLevel();
     }
     private void Update()
     {

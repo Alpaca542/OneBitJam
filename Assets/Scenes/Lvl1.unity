@@ -5161,7 +5161,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 40f0743d7cd0540d38d936c3b4475b17, type: 3}
   - {fileID: 21300000, guid: 40f0743d7cd0540d38d936c3b4475b17, type: 3}
   - {fileID: 21300000, guid: 0082df3e1edb241288e97c5fe50e4b97, type: 3}
-  stopIndexes: 05000000
+  stopIndexes: 0500000005000000
   index: 0
   btnContinue: {fileID: 542807531}
   cnv: {fileID: 633097137}

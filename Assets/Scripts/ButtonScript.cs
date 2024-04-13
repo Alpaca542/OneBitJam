@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class ButtonScript : MonoBehaviour
 {
@@ -32,6 +33,11 @@ public class ButtonScript : MonoBehaviour
             {
                 WhatIsConnected.GetComponent<DoorScript>().DoWeGoUp = true;
             }
+            else if (WhatIsConnected.tag == "Machine")
+            {
+                WhatIsConnected.GetComponent<Light2D>().enabled = true;
+                WhatIsConnected.GetComponent<MachineScript>().AmIActivated = true;
+            }
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -58,6 +64,10 @@ public class ButtonScript : MonoBehaviour
             else if (WhatIsConnected.tag == "Door")
             {
                 WhatIsConnected.GetComponent<DoorScript>().DoWeGoUp = false;
+            }
+            else if (WhatIsConnected.tag == "Machine")
+            {
+                WhatIsConnected.GetComponent<Light2D>().enabled = false;
             }
         }
     }

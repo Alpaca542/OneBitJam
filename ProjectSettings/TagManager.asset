@@ -9,6 +9,7 @@ TagManager:
   - Door
   - Box
   - Slime
+  - Machine
   layers:
   - Default
   - TransparentFX

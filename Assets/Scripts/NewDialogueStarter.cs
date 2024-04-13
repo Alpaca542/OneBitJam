@@ -8,7 +8,7 @@ public class NewDialogueStarter : MonoBehaviour
     public DialogueScript dialoguemng;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if((collision.gameObject.tag == "Player" || collision.gameObject.tag == "Slime") && !activated )
+        if((collision.gameObject.tag == "Player" || collision.gameObject.tag == "Slime") && !activated)
         {
             dialoguemng.Stststtst();
             activated = true;

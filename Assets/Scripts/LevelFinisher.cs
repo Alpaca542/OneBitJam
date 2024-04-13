@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class LevelFinisher : MonoBehaviour
 {
     public GameObject panelForTheEnd;
+    public GameObject panelForPause;
     public DialogueScript dlgmng;
     public GameObject SmokeEffect;
     public void StopTheLevel()
@@ -27,11 +28,33 @@ public class LevelFinisher : MonoBehaviour
     }
     public void OnNextPressed()
     {
+        Time.timeScale = 1;
         SmokeEffect.SetActive(true);
         Invoke(nameof(InvokeOpenLastLevel), 1f);
     }
+    public void OnPause()
+    {
+        panelForPause.SetActive(true);
+        Time.timeScale = 0;
+    }
+    public void OnRestart()
+    {
+        Time.timeScale = 1;
+        SmokeEffect.SetActive(true);
+        Invoke(nameof(OnRestartInvoke), 1f);
+    }
+    public void OnRestartInvoke()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    public void OnResume()
+    {
+        panelForPause.SetActive(false);
+        Time.timeScale = 1;
+    }
     public void OnLevelsPresed()
     {
+        Time.timeScale = 1;
         SmokeEffect.SetActive(true);
         Invoke(nameof(InvokeOpenLvlMenu), 1f);
     }

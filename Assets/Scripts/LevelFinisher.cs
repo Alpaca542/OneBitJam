@@ -46,7 +46,6 @@ public class LevelFinisher : MonoBehaviour
         else if(collision.gameObject.tag == "Player")
         {
             dlgmng.Stststtst();
-            dlgmng.index--;
         }
     }
     public void OnNextPressed()

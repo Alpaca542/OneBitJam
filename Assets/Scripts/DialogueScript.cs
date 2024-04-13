@@ -69,7 +69,10 @@ public class DialogueScript : MonoBehaviour
     {
         if (cnv.activeSelf)
         {
-            index++;
+            if (sentences[index] != "I need to leave the room myself, not in a human body")
+            {
+                index++;
+            }
             if (Array.IndexOf(stopIndexes, index) == -1)
             {
                 coroutine = Type();

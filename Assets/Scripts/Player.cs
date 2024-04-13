@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
@@ -16,15 +17,21 @@ public class Player : MonoBehaviour
     public bool AmIFlying = false;
     public Transform rayer;
     public Texture2D cursorTexture;
-
+    public bool AmIActive;
     private Rigidbody2D rb;
 
+    
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
+    public void OnDisable()
+    {
+        AmIActive = false;
+    }
     private void OnEnable()
     {
+        AmIActive = true;
         if (gameObject.name.Contains("Player2"))
         {
             Cursor.SetCursor(cursorTexture, Vector2.zero, CursorMode.Auto);
@@ -40,10 +47,12 @@ public class Player : MonoBehaviour
     }
     void Update()
     {
+       
         if (!AmIFlying)
         {
-            //Move
             
+            //Move
+
             float moveHorizontal = Input.GetAxis("Horizontal");
             if(moveHorizontal!=0)
             {
@@ -51,11 +60,6 @@ public class Player : MonoBehaviour
                     transform.rotation = Quaternion.Euler(0, 0, 0);
                 else if (moveHorizontal < -0.2 && transform.rotation != Quaternion.Euler(0, -180, 0) && transform.rotation != Quaternion.Euler(0, 180, 0))
                     transform.rotation = Quaternion.Euler(0, 180, 0);
-                myAnimator.SetBool("walkAnimation", true);
-            }
-            else
-            {
-                myAnimator.SetBool("walkAnimation", false);
             }
             
             rb.velocity = new Vector2(moveHorizontal*speed, rb.velocity.y);
@@ -70,5 +74,6 @@ public class Player : MonoBehaviour
         {
             myAnimator.SetBool("walkAnimation", false);
         }
+        
     }
 }

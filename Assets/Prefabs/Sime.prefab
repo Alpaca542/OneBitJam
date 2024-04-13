@@ -5005,7 +5005,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   Stopped: 1
-  AmIActive: 1
   AmIFlying: 0
   prt: {fileID: 7242625603239267164}
 --- !u!114 &2968089608244674508

@@ -10,6 +10,7 @@ public class makeMeDeadSlime : MonoBehaviour
     public Animator myAnimator;
     public soundManager mySound;
     public SlimeController myPlayer;
+    public ParticleSystem prt;
     bool ifalled = false;
 
     void Start()
@@ -46,7 +47,7 @@ public class makeMeDeadSlime : MonoBehaviour
         else
         {
             myAnimator.SetBool("walkAnimation", false);
-
+            prt.Stop();
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)

@@ -5114,6 +5114,7 @@ MonoBehaviour:
   myAnimator: {fileID: 8631360868339575728}
   mySound: {fileID: 0}
   myPlayer: {fileID: 0}
+  prt: {fileID: 7242625603239267164}
 --- !u!82 &7757046019746657174
 AudioSource:
   m_ObjectHideFlags: 0

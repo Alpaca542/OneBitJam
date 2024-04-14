@@ -25,13 +25,8 @@ public class Player : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
     }
-    public void OnDisable()
-    {
-        AmIActive = false;
-    }
     private void OnEnable()
     {
-        AmIActive = true;
         if (gameObject.name.Contains("Player2"))
         {
             Cursor.SetCursor(cursorTexture, Vector2.zero, CursorMode.Auto);

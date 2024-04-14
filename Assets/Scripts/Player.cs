@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class Player : MonoBehaviour
 {
@@ -19,8 +20,10 @@ public class Player : MonoBehaviour
     public Texture2D cursorTexture;
     public bool AmIActive;
     private Rigidbody2D rb;
+    public Transform rayer1;
+    public Transform rayer3;
 
-    
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -60,7 +63,7 @@ public class Player : MonoBehaviour
             rb.velocity = new Vector2(moveHorizontal*speed, rb.velocity.y);
 
             //Jump
-            if (Input.GetKeyDown(KeyCode.Space) && Physics2D.Raycast(rayer.position, Vector2.down, 0.001f, WhatToCheckOnJump))
+            if (Input.GetKeyDown(KeyCode.Space) && (Physics2D.Raycast(rayer.position, Vector2.down, 0.001f, WhatToCheckOnJump) || Physics2D.Raycast(rayer1.position, Vector2.down, 0.001f, WhatToCheckOnJump) || Physics2D.Raycast(rayer3.position, Vector2.down, 0.001f, WhatToCheckOnJump)))
             {
                 rb.AddForce(Vector2.up * jumpForce);
             }

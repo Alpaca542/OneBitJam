@@ -19,25 +19,12 @@ public class soundManager : MonoBehaviour
     // Update is called once per frame
 
     public void PlaySound(int whichsound)
-    {if (!shouldILoop)
-        {
+    {
+        if(!sound.isPlaying) {
             sound.clip = soundslist[whichsound];
             sound.Play();
-
         }
-    else
-        {
-            if(!sound.isPlaying) {
-                sound.clip = soundslist[whichsound];
-                sound.Play();
-            }
             
-        }
-        
-        if(shouldILoop)
-        {
-            sound.loop = true;
-        }
     }
 
     public void letmeplay()

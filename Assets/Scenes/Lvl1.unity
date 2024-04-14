@@ -1298,7 +1298,6 @@ GameObject:
   m_Component:
   - component: {fileID: 405287948}
   - component: {fileID: 405287951}
-  - component: {fileID: 405287950}
   - component: {fileID: 405287949}
   m_Layer: 0
   m_Name: CameraNoppsCam
@@ -1366,14 +1365,6 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
---- !u!81 &405287950
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 405287947}
-  m_Enabled: 1
 --- !u!20 &405287951
 Camera:
   m_ObjectHideFlags: 0

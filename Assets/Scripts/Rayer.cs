@@ -82,6 +82,14 @@ public class Rayer : MonoBehaviour
                 }
 
             }
+            if ((Camera.main.ScreenToWorldPoint(Input.mousePosition).x - plr.transform.position.x)<-0.2 && Input.GetAxis("Horizontal") == 0)
+            {
+                plr.transform.rotation = Quaternion.Euler(0, 180, 0);
+            }
+            else if((Camera.main.ScreenToWorldPoint(Input.mousePosition).x - plr.transform.position.x) > 0.2 && Input.GetAxis("Horizontal") == 0)
+            {
+                plr.transform.rotation = Quaternion.Euler(0, 0, 0);
+            }
         }
     }
 }

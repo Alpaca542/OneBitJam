@@ -5438,7 +5438,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 871482969083436021, guid: 00bd6a469c63e431ba5b8bae5b0b3afb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.643146
+      value: 14.08
       objectReference: {fileID: 0}
     - target: {fileID: 871482969083436021, guid: 00bd6a469c63e431ba5b8bae5b0b3afb, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5495,7 +5495,7 @@ PrefabInstance:
     - target: {fileID: 6642506016265988871, guid: 00bd6a469c63e431ba5b8bae5b0b3afb, type: 3}
       propertyPath: panelForTheEnd
       value: 
-      objectReference: {fileID: 1583287664}
+      objectReference: {fileID: 1540487035}
     - target: {fileID: 8146186312290254657, guid: 00bd6a469c63e431ba5b8bae5b0b3afb, type: 3}
       propertyPath: m_Name
       value: LevelFinisher
@@ -7442,7 +7442,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2114916090}
   - component: {fileID: 2114916093}
-  - component: {fileID: 2114916092}
   - component: {fileID: 2114916091}
   m_Layer: 0
   m_Name: CameraNoppsCam
@@ -7510,14 +7509,6 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
---- !u!81 &2114916092
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2114916089}
-  m_Enabled: 1
 --- !u!20 &2114916093
 Camera:
   m_ObjectHideFlags: 0

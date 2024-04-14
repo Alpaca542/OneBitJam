@@ -71,4 +71,8 @@ public class ButtonScript : MonoBehaviour
             }
         }
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        gameObject.GetComponent<soundManager>().PlaySound(0);
+    }
 }

@@ -9,6 +9,7 @@ public class Forcer : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player" || collision.gameObject.tag == "Box" || collision.gameObject.tag == "Slime")
         {
+            gameObject.GetComponent<soundManager>().PlaySound(0);
             if (collision.gameObject.tag == "Player")
             {
                 collision.gameObject.GetComponent<Player>().AmIFlying = true;

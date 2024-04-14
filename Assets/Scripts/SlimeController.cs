@@ -10,6 +10,9 @@ public class SlimeController : MonoBehaviour
     public bool AmIFlying = false;
     private Rigidbody2D rb;
     public ParticleSystem prt;
+    public Animator myAnimator;
+    public Transform rayer;
+    public LayerMask WhatToCheckOnJump;
     private void OnEnable()
     {
         Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);

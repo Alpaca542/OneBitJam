@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class makeMeDead : MonoBehaviour
@@ -9,6 +10,7 @@ public class makeMeDead : MonoBehaviour
     public Animator myAnimator;
     public soundManager mySound;
     public Player myPlayer;
+    bool ifalled = false;
 
     void Start()
     {
@@ -23,17 +25,17 @@ public class makeMeDead : MonoBehaviour
     {
         if ((Mathf.Abs(rb.velocity.x) > 0.1) && (rb.velocity.y == 0) && myPlayer.enabled)
         {
-            gameObject.GetComponent<soundManager>().shouldILoop = true;
-            gameObject.GetComponent<soundManager>().PlaySound(0);
-        }
-        else if ((rb.velocity.x == 0) && (rb.velocity.y == 0))
-        {
-            gameObject.GetComponent<soundManager>().sound.Stop();
+            gameObject.GetComponent<soundManager>().sound.mute = false;
         }
         else
         {
-            gameObject.GetComponent<soundManager>().shouldILoop = false;
-            gameObject.GetComponent<soundManager>().PlaySound(0);
+            if (!ifalled)
+            {
+                if(mySound.sound.isPlaying) {
+                    gameObject.GetComponent<soundManager>().sound.mute = true;
+                }
+                
+            }
         }
         float moveHorizontal = Input.GetAxis("Horizontal");
         if (moveHorizontal != 0 && myPlayer.enabled)
@@ -47,8 +49,18 @@ public class makeMeDead : MonoBehaviour
 
         }
     }
-    public void MakeMeStopped()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        
+        if (Physics2D.Raycast(myPlayer.rayer.position, Vector2.down, 0.001f, myPlayer.WhatToCheckOnJump))
+        {
+            ifalled = true;
+            Invoke(nameof(MakeMeNotFalled), 0.2f);
+            gameObject.GetComponent<soundManager>().sound.mute = false;
+            gameObject.GetComponent<soundManager>().PlaySound(0);
+        }
+    }
+    public void MakeMeNotFalled()
+    {
+        ifalled = false;
     }
 }

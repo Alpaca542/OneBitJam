@@ -45,7 +45,7 @@ public class ManageTransformation : MonoBehaviour
         slime.GetComponent<Light2D>().enabled = true;
         Camera.main.GetComponent<playerFollow>().player = slime;
     }
-    private void Awake()
+    public void Awake()
     {
         slime = GameObject.FindGameObjectWithTag("Slime");
         playerList = GameObject.FindGameObjectsWithTag("Player");

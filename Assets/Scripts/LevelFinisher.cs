@@ -32,6 +32,10 @@ public class LevelFinisher : MonoBehaviour
             StopTheLevelInvoke();
         }
     }
+    private void Awake()
+    {
+        Time.timeScale = 1;
+    }
     public void StopTheLevelInvoke()
     {
         panelForTheEnd.SetActive(true);

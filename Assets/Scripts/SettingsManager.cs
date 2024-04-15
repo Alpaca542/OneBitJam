@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Audio;
 
-public class settingssettermanager : MonoBehaviour
+public class SetingsManager : MonoBehaviour
 {
     public Slider volumeslider;
     public Slider volumeslidermsc;

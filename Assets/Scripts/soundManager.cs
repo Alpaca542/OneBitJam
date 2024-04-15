@@ -20,8 +20,9 @@ public class soundManager : MonoBehaviour
 
     public void PlaySound(int whichsound)
     {
-        if(!sound.isPlaying) {
+        if(!sound.isPlaying && PlayerPrefs.GetString("sfx") == "True") {
             sound.clip = soundslist[whichsound];
+            sound.volume = PlayerPrefs.GetFloat("volume");
             sound.Play();
         }
             

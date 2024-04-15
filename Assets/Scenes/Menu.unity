@@ -200,9 +200,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99410fa8037494eeea692cba3029bad7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeslider: {fileID: 0}
+  volumeslider: {fileID: 1251968178}
   volumeslidermsc: {fileID: 0}
-  joysticktoggle: {fileID: 0}
+  joysticktoggle: {fileID: 620614270}
 --- !u!4 &130239017
 Transform:
   m_ObjectHideFlags: 0
@@ -1266,7 +1266,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Music
+  m_Text: Volume
 --- !u!222 &666485035
 CanvasRenderer:
   m_ObjectHideFlags: 0

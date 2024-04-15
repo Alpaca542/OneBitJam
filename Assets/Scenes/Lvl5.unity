@@ -1092,6 +1092,10 @@ PrefabInstance:
       value: ppfxSmokeBig
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: b482e2091e2dc7e49ac1c74bb09bcc72, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b482e2091e2dc7e49ac1c74bb09bcc72, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -1190,7 +1194,7 @@ GameObject:
   - component: {fileID: 295113173}
   - component: {fileID: 295113172}
   - component: {fileID: 295113171}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Button (Legacy)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1465,7 +1469,7 @@ GameObject:
   - component: {fileID: 349027362}
   - component: {fileID: 349027361}
   - component: {fileID: 349027360}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3399,7 +3403,7 @@ GameObject:
   - component: {fileID: 731640268}
   - component: {fileID: 731640267}
   - component: {fileID: 731640266}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Button (Legacy) (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4837,7 +4841,7 @@ GameObject:
   - component: {fileID: 1147444713}
   - component: {fileID: 1147444712}
   - component: {fileID: 1147444711}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (Legacy)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7604,7 +7608,7 @@ GameObject:
   - component: {fileID: 1968481281}
   - component: {fileID: 1968481280}
   - component: {fileID: 1968481279}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: EndGameCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7661,7 +7665,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 1
-  m_Camera: {fileID: 519420031}
+  m_Camera: {fileID: 2114916093}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1

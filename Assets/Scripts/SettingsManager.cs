@@ -38,14 +38,13 @@ public class settingssettermanager : MonoBehaviour
         {
             PlayerPrefs.SetFloat("volume", 0);
         }
-
-
         if (!PlayerPrefs.HasKey("sfx"))
         {
             PlayerPrefs.SetString("sfx", "False");
         }
-        volumeslider.value = PlayerPrefs.GetFloat("volume");
 
+
+        volumeslider.value = PlayerPrefs.GetFloat("volume");
         if (PlayerPrefs.GetString("sfx") == "True")
         {
             joysticktoggle.isOn = true;

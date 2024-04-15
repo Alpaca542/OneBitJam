@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class MenuManager : MonoBehaviour
 {
     public GameObject SmokeEffect;
+    public GameObject CnvMain;
+    public GameObject CnvSettings;
     public int lvl;
     private void Start()
     {
@@ -37,7 +39,13 @@ public class MenuManager : MonoBehaviour
     }
     public void OpenSettings()
     {
-        //settings maybe
+        CnvMain.SetActive(false);
+        CnvSettings.SetActive(true);
+    }
+    public void CloseSettings()
+    {
+        CnvMain.SetActive(true);
+        CnvSettings.SetActive(false);
     }
     public void InvokeOpenMenu()
     {

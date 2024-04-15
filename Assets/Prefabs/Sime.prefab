@@ -5047,7 +5047,7 @@ MonoBehaviour:
   rayer: {fileID: 2329345934215903891}
   WhatToCheckOnJump:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 200
 --- !u!114 &2968089608244674508
 MonoBehaviour:
   m_ObjectHideFlags: 0

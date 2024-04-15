@@ -171,7 +171,7 @@ MonoBehaviour:
   jumpForce: 650
   WhatToCheckOnJump:
     serializedVersion: 2
-    m_Bits: 72
+    m_Bits: 200
   AmIFlying: 0
   rayer: {fileID: 6338479222504454495}
   cursorTexture: {fileID: 0}

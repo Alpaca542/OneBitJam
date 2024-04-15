@@ -78,6 +78,8 @@ public class CutSceneDialogue : MonoBehaviour
         }
         else if(index == 6 && SceneManager.GetActiveScene().name == "Lvl1")
         {
+            btnContinue.SetActive(false);
+            cnv.SetActive(false);
             finisher.GetComponent<LevelFinisher>().StopTheLevel();
         }
         else if (index == stopIndexes[0] && SceneManager.GetActiveScene().name == "Lvl6")

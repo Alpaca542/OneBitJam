@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2329345934215903891}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: slimeRayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5240,6 +5240,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Slime24
       objectReference: {fileID: 0}
+    - target: {fileID: -8653719598885068355, guid: fd3c1ec90ad15774796ac3f2c168f662, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: fd3c1ec90ad15774796ac3f2c168f662, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.0881102
@@ -5291,6 +5295,22 @@ PrefabInstance:
     - target: {fileID: -7552582706839291426, guid: fd3c1ec90ad15774796ac3f2c168f662, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5112963278063194709, guid: fd3c1ec90ad15774796ac3f2c168f662, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 386791141387813222, guid: fd3c1ec90ad15774796ac3f2c168f662, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3297364353584691495, guid: fd3c1ec90ad15774796ac3f2c168f662, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4157741701538757237, guid: fd3c1ec90ad15774796ac3f2c168f662, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

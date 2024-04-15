@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5500123336464975121}
   - component: {fileID: 5010644711168510139}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 4115034412810499627}
   - component: {fileID: 3733477273796335283}
   - component: {fileID: 6642506016265988871}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: LevelFinisher
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -227,4 +227,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panelForTheEnd: {fileID: 0}
+  panelForPause: {fileID: 0}
+  dlgmng: {fileID: 0}
   SmokeEffect: {fileID: 0}
+  explosion1: {fileID: 0}

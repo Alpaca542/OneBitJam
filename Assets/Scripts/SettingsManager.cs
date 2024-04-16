@@ -16,7 +16,7 @@ public class SetingsManager : MonoBehaviour
     }
     public void ResetBtn()
     {
-        PlayerPrefs.SetFloat("volume", 0);
+        PlayerPrefs.SetFloat("volume", 1);
         PlayerPrefs.SetString("sfx", "False");
         if (PlayerPrefs.GetString("sfx") == "True")
         {
@@ -36,7 +36,7 @@ public class SetingsManager : MonoBehaviour
     {
         if (!PlayerPrefs.HasKey("volume"))
         {
-            PlayerPrefs.SetFloat("volume", 0);
+            PlayerPrefs.SetFloat("volume", 1);
         }
         if (!PlayerPrefs.HasKey("sfx"))
         {

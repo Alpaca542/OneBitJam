@@ -50,7 +50,7 @@ public class ManageTransformation : MonoBehaviour
         slime = GameObject.FindGameObjectWithTag("Slime");
         playerList = GameObject.FindGameObjectsWithTag("Player");
         for (int i = 0; i < playerList.Length; i++)
-        {
+    {
             BtnList[i].SetActive(true);
             BtnList[i].GetComponent<Image>().sprite = playerList[i].GetComponent<SpriteRenderer>().sprite;
             BtnList[i].GetComponent<Image>().color = playerList[i].GetComponent<SpriteRenderer>().color;

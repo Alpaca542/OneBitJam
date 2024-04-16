@@ -6,8 +6,10 @@ using UnityEngine.Rendering.Universal;
 public class ButtonScript : MonoBehaviour
 {
     public GameObject WhatIsConnected;
+    public GameObject trmng;
     public GameObject MyText;
     public bool AmILiftable;
+    public GameObject[] WhoShouldAppear;
     private void OnTriggerStay2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "Player" || collision.gameObject.tag == "Box" || collision.gameObject.tag == "Slime")
@@ -19,6 +21,14 @@ public class ButtonScript : MonoBehaviour
             else
             {
                 GetComponent<BoxCollider2D>().size = new Vector2(GetComponent<BoxCollider2D>().size.x, 20);
+            }
+            if (WhoShouldAppear.Length != 0)
+            {
+                foreach (GameObject gmb in WhoShouldAppear)
+                {
+                    gmb.tag = "Player";
+                }
+                trmng.GetComponent<ManageTransformation>().Awake();
             }
             if (MyText != null)
             {

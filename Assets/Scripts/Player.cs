@@ -21,11 +21,18 @@ public class Player : MonoBehaviour
     private Rigidbody2D rb;
     public Transform rayer1;
     public Transform rayer3;
-
+    public GameObject mySlime;
+    public LayerMask playerlayer;
 
     void Start()
     {
+        mySlime = GameObject.FindWithTag("Slime");
         rb = GetComponent<Rigidbody2D>();
+    }
+    private void Awake()
+    {
+
+        mySlime = GameObject.FindWithTag("Slime");
     }
     private void OnEnable()
     {
@@ -37,6 +44,12 @@ public class Player : MonoBehaviour
         {
             Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
         }
+
+        
+    }
+    public void aftertrans()
+    {
+        mySlime.gameObject.layer = 6;
     }
     private void OnCollisionStay2D(Collision2D collision)
     {

@@ -548,7 +548,7 @@ GameObject:
   - component: {fileID: 181264357}
   - component: {fileID: 181264356}
   - component: {fileID: 181264355}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player3Btn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2177,7 +2177,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 223
+    m_Bits: 159
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -2408,7 +2408,7 @@ GameObject:
   - component: {fileID: 556389729}
   - component: {fileID: 556389731}
   - component: {fileID: 556389730}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Panel (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2489,7 +2489,7 @@ GameObject:
   - component: {fileID: 611757589}
   - component: {fileID: 611757588}
   - component: {fileID: 611757587}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player4Btn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3127,7 +3127,7 @@ GameObject:
   - component: {fileID: 843588162}
   - component: {fileID: 843588161}
   - component: {fileID: 843588160}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player2Btn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3573,7 +3573,7 @@ GameObject:
   - component: {fileID: 1174350061}
   - component: {fileID: 1174350060}
   - component: {fileID: 1174350059}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SlimeBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3668,7 +3668,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.7019608}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3705,7 +3705,7 @@ GameObject:
   - component: {fileID: 1186416425}
   - component: {fileID: 1186416424}
   - component: {fileID: 1186416423}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Button (Legacy)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4658,7 +4658,7 @@ GameObject:
   - component: {fileID: 1416102487}
   - component: {fileID: 1416102486}
   - component: {fileID: 1416102485}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player1Btn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5797,7 +5797,7 @@ GameObject:
   - component: {fileID: 1772982970}
   - component: {fileID: 1772982969}
   - component: {fileID: 1772982968}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Transformation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5854,7 +5854,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 1
-  m_Camera: {fileID: 519420031}
+  m_Camera: {fileID: 2132433777}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -6470,7 +6470,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 32
+    m_Bits: 352
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0

@@ -1020,6 +1020,12 @@ MonoBehaviour:
   slime: {fileID: 990527410}
   line: {fileID: 8834746703019447865, guid: 65da33beef0c6491c843d0efc6200ce2, type: 3}
   ln: {fileID: 0}
+  defaultlayer:
+    serializedVersion: 2
+    m_Bits: 0
+  playerlayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1001 &298072991
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1556,6 +1562,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 990527410}
+  secondCamera: {fileID: 1194571086}
   speed: 3
 --- !u!4 &532939601 stripped
 Transform:
@@ -4400,24 +4407,48 @@ PrefabInstance:
       value: ppfxExplosionHeavyDebrisLong
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: f270f02e78dfe3949bad38242df6682c, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f270f02e78dfe3949bad38242df6682c, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: f270f02e78dfe3949bad38242df6682c, type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: f270f02e78dfe3949bad38242df6682c, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: f270f02e78dfe3949bad38242df6682c, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: f270f02e78dfe3949bad38242df6682c, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: f270f02e78dfe3949bad38242df6682c, type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 100006, guid: f270f02e78dfe3949bad38242df6682c, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 100008, guid: f270f02e78dfe3949bad38242df6682c, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: f270f02e78dfe3949bad38242df6682c, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: f270f02e78dfe3949bad38242df6682c, type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 100010, guid: f270f02e78dfe3949bad38242df6682c, type: 3}
       propertyPath: m_IsActive

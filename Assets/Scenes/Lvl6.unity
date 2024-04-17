@@ -1148,6 +1148,12 @@ MonoBehaviour:
   slime: {fileID: 0}
   line: {fileID: 8834746703019447865, guid: 65da33beef0c6491c843d0efc6200ce2, type: 3}
   ln: {fileID: 0}
+  defaultlayer:
+    serializedVersion: 2
+    m_Bits: 0
+  playerlayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &308355302
 GameObject:
   m_ObjectHideFlags: 0
@@ -2406,6 +2412,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 405427750}
+  secondCamera: {fileID: 2132433773}
   speed: 3
 --- !u!1 &542807531
 GameObject:

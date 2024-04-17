@@ -6,6 +6,7 @@ using UnityEngine;
 public class playerFollow : MonoBehaviour
 {
     public GameObject player;
+    public GameObject secondCamera;
     private Vector3 playervector;
     public float speed;
     public void ChoosePlayer()

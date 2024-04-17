@@ -13,6 +13,8 @@ public class ManageTransformation : MonoBehaviour
     public GameObject slime;
     public GameObject line;
     public GameObject ln;
+    public LayerMask defaultlayer;
+    public LayerMask playerlayer;
     public void OnChosenInPanel(int BtnNumber)
     {
         if (Camera.main.GetComponent<playerFollow>().player != playerList[BtnNumber])
@@ -25,12 +27,24 @@ public class ManageTransformation : MonoBehaviour
                 gmb.GetComponent<Player>().enabled = false;
             }
             slime.GetComponent<SlimeController>().enabled = false;
-            ln = Instantiate(line, slime.transform.position, Quaternion.identity);
-            ln.GetComponent<LineThatFollows>().WhatToFollow = playerList[BtnNumber];
-            playerList[BtnNumber].GetComponent<Light2D>().enabled = true;
-            playerList[BtnNumber].GetComponent<Player>().enabled = true;
-            Camera.main.GetComponent<playerFollow>().player = playerList[BtnNumber];
+            slime.layer = 1;
+            slime.GetComponent<Animation>().Play();
+            StartCoroutine(InvokeStopBlooming(BtnNumber));
         }
+    }
+    public IEnumerator InvokeStopBlooming(int BtnNumber)
+    {
+        yield return new WaitForSeconds(0.4f);
+        ln = Instantiate(line, slime.transform.position, Quaternion.identity);
+        ln.GetComponent<LineThatFollows>().WhatToFollow = playerList[BtnNumber];
+        playerList[BtnNumber].GetComponent<Light2D>().enabled = true;
+        playerList[BtnNumber].GetComponent<Player>().enabled = true;
+        Camera.main.GetComponent<playerFollow>().player = playerList[BtnNumber];
+        Invoke(nameof(InvokeStopTwo), 0.3f);
+    }
+    public void InvokeStopTwo()
+    {
+        slime.layer = 6;
     }
     public void OnChosenSlimel()
     {

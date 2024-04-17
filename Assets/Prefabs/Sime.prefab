@@ -4878,8 +4878,7 @@ GameObject:
   - component: {fileID: 5264412672752153084}
   - component: {fileID: 7757046019746657174}
   - component: {fileID: 5044225119743554543}
-  - component: {fileID: 7257032588313102868}
-  - component: {fileID: 4683696782602607826}
+  - component: {fileID: 5374182573003069926}
   m_Layer: 6
   m_Name: Sime
   m_TagString: Slime
@@ -5046,17 +5045,11 @@ MonoBehaviour:
   AmIFlying: 0
   prt: {fileID: 7242625603239267164}
   myAnimator: {fileID: 8631360868339575728}
-  myAnimatorLight: {fileID: 7257032588313102868}
+  myAnimatorLight: {fileID: 0}
   rayer: {fileID: 2329345934215903891}
   WhatToCheckOnJump:
     serializedVersion: 2
     m_Bits: 200
-  defaultlayer:
-    serializedVersion: 2
-    m_Bits: 1
-  playerlayer:
-    serializedVersion: 2
-    m_Bits: 64
 --- !u!114 &2968089608244674508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5237,42 +5230,22 @@ MonoBehaviour:
   - {fileID: 8300000, guid: fb83cd31f88c9994a8a9167921492aa8, type: 3}
   shouldILoop: 0
   amIPlaying: 0
---- !u!95 &7257032588313102868
-Animator:
-  serializedVersion: 5
+--- !u!111 &5374182573003069926
+Animation:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3342036052735823439}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: bd0a4f475776f9c4187978bc5a386de7, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
---- !u!114 &4683696782602607826
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3342036052735823439}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85d0dcb0da88d8d4ca9096e9ccc15c64, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerlayer:
-    serializedVersion: 2
-    m_Bits: 64
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 8a0607b7304aa094d8d8ca6efdecb5e9, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 8a0607b7304aa094d8d8ca6efdecb5e9, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1001 &8082828589233806953
 PrefabInstance:
   m_ObjectHideFlags: 0

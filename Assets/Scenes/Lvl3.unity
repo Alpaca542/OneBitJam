@@ -1738,6 +1738,12 @@ MonoBehaviour:
   slime: {fileID: 990527410}
   line: {fileID: 8834746703019447865, guid: 65da33beef0c6491c843d0efc6200ce2, type: 3}
   ln: {fileID: 0}
+  defaultlayer:
+    serializedVersion: 2
+    m_Bits: 1
+  playerlayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1001 &298072991
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4156,7 +4162,7 @@ PrefabInstance:
     - target: {fileID: 8962620603085391920, guid: a2c8d3cb66d0d4be2b9e2cf8aeeb0de7, type: 3}
       propertyPath: myAnimatorLight
       value: 
-      objectReference: {fileID: 990527411}
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4683696782602607826, guid: a2c8d3cb66d0d4be2b9e2cf8aeeb0de7, type: 3}
     m_RemovedGameObjects: []
@@ -4166,11 +4172,6 @@ PrefabInstance:
 --- !u!1 &990527410 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3342036052735823439, guid: a2c8d3cb66d0d4be2b9e2cf8aeeb0de7, type: 3}
-  m_PrefabInstance: {fileID: 990527409}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &990527411 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 7257032588313102868, guid: a2c8d3cb66d0d4be2b9e2cf8aeeb0de7, type: 3}
   m_PrefabInstance: {fileID: 990527409}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1014522461

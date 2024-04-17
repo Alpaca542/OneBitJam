@@ -14,15 +14,9 @@ public class SlimeController : MonoBehaviour
     public Animator myAnimatorLight;
     public Transform rayer;
     public LayerMask WhatToCheckOnJump;
-    public LayerMask defaultlayer;
-    public LayerMask playerlayer;
     private void OnEnable()
     {
         Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
-       
-        myAnimatorLight.Play("empty");
-        myAnimatorLight.Play("LightAnimation");
-        
     }
     void Update()
     {
@@ -53,12 +47,6 @@ public class SlimeController : MonoBehaviour
     private void OnCollisionStay2D(Collision2D collision)
     {
         AmIFlying = false;
-    }
-    public void OnDisable()
-    {
-        gameObject.layer = defaultlayer;
-        myAnimatorLight.Play("LightAnimation");
-        
     }
    
     private void Start()

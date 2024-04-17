@@ -11,11 +11,18 @@ public class SlimeController : MonoBehaviour
     private Rigidbody2D rb;
     public ParticleSystem prt;
     public Animator myAnimator;
+    public Animator myAnimatorLight;
     public Transform rayer;
     public LayerMask WhatToCheckOnJump;
+    public LayerMask defaultlayer;
+    public LayerMask playerlayer;
     private void OnEnable()
     {
         Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+       
+        myAnimatorLight.Play("empty");
+        myAnimatorLight.Play("LightAnimation");
+        
     }
     void Update()
     {
@@ -47,6 +54,13 @@ public class SlimeController : MonoBehaviour
     {
         AmIFlying = false;
     }
+    public void OnDisable()
+    {
+        gameObject.layer = defaultlayer;
+        myAnimatorLight.Play("LightAnimation");
+        
+    }
+   
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();

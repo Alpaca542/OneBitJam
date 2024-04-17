@@ -178,6 +178,9 @@ MonoBehaviour:
   AmIActive: 0
   rayer1: {fileID: 6959386449397369628}
   rayer3: {fileID: 1400096661793415608}
+  playerlayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!114 &1876612137830989094
 MonoBehaviour:
   m_ObjectHideFlags: 0

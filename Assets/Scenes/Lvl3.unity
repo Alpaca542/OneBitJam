@@ -736,7 +736,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 352
+    m_Bits: 354
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -2282,7 +2282,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.00012207031, y: 0.0024414062}
+  m_AnchoredPosition: {x: -0.00024414062, y: 0.0024414062}
   m_SizeDelta: {x: -0.00024414, y: -0.005127}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &486562607
@@ -4153,7 +4153,12 @@ PrefabInstance:
       propertyPath: m_GravityScale
       value: 3
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8962620603085391920, guid: a2c8d3cb66d0d4be2b9e2cf8aeeb0de7, type: 3}
+      propertyPath: myAnimatorLight
+      value: 
+      objectReference: {fileID: 990527411}
+    m_RemovedComponents:
+    - {fileID: 4683696782602607826, guid: a2c8d3cb66d0d4be2b9e2cf8aeeb0de7, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -4161,6 +4166,11 @@ PrefabInstance:
 --- !u!1 &990527410 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3342036052735823439, guid: a2c8d3cb66d0d4be2b9e2cf8aeeb0de7, type: 3}
+  m_PrefabInstance: {fileID: 990527409}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &990527411 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7257032588313102868, guid: a2c8d3cb66d0d4be2b9e2cf8aeeb0de7, type: 3}
   m_PrefabInstance: {fileID: 990527409}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1014522461

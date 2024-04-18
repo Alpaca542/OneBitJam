@@ -66,7 +66,9 @@ public class LevelFinisher : MonoBehaviour
     }
     public void OnRestart()
     {
-        Time.timeScale = 0;
+        Camera.main.GetComponent<playerFollow>().player.GetComponent<Rigidbody2D>().isKinematic = true;
+        Camera.main.GetComponent<playerFollow>().speed = 0;
+        Time.timeScale = 1;
         SmokeEffect.SetActive(true);
         Invoke(nameof(OnRestartInvoke), 1f);
     }

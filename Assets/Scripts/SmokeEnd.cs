@@ -8,12 +8,12 @@ public class SmokeEnd : MonoBehaviour
     private void Awake()
     {
         particleLauncher = GetComponent<ParticleSystem>();
-        Invoke(nameof(invstopspvn), 0.1f);
+        Invoke(nameof(invstopspvn), 0.23f);
     }
     public void invstopspvn()
     {
         ParticleSystem.MainModule psMain = particleLauncher.main;
-        psMain.simulationSpeed = 2;
+        psMain.simulationSpeed = 4;
         psMain.maxParticles = 0;
         particleLauncher.Emit(1);
     }

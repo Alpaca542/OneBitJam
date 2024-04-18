@@ -66,7 +66,7 @@ public class LevelFinisher : MonoBehaviour
     }
     public void OnRestart()
     {
-        Time.timeScale = 1;
+        Time.timeScale = 0;
         SmokeEffect.SetActive(true);
         Invoke(nameof(OnRestartInvoke), 1f);
     }

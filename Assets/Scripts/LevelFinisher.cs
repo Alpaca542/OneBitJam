@@ -33,10 +33,6 @@ public class LevelFinisher : MonoBehaviour
             StopTheLevelInvoke();
         }
     }
-    private void Awake()
-    {
-        Time.timeScale = 1;
-    }
     public void StopTheLevelInvoke()
     {
         panelForTheEnd.SetActive(true);
@@ -56,20 +52,17 @@ public class LevelFinisher : MonoBehaviour
     }
     public void OnNextPressed()
     {
-        Time.timeScale = 1;
         SmokeEffect.SetActive(true);
         Invoke(nameof(InvokeOpenLastLevel), 1f);
     }
     public void OnPause()
     {
         panelForPause.SetActive(true);
-        Time.timeScale = 0;
     }
     public void OnRestart()
     {
         Camera.main.GetComponent<playerFollow>().player.GetComponent<Rigidbody2D>().isKinematic = true;
         Camera.main.GetComponent<playerFollow>().speed = 0;
-        Time.timeScale = 1;
         SmokeEffect.SetActive(true);
         Invoke(nameof(OnRestartInvoke), 1f);
     }
@@ -80,11 +73,9 @@ public class LevelFinisher : MonoBehaviour
     public void OnResume()
     {
         panelForPause.SetActive(false);
-        Time.timeScale = 1;
     }
     public void OnLevelsPresed()
     {
-        Time.timeScale = 1;
         SmokeEffect.SetActive(true);
         Invoke(nameof(InvokeOpenLvlMenu), 1f);
     }

@@ -44,8 +44,7 @@ public class Player : MonoBehaviour
     public void OnDisable()
     {
         
-        GameObject lights = Instantiate(lightParticles, transform.TransformDirection(new Vector2(transform.position.x, (transform.position.y + 0.72f))), transform.rotation);
-        lights.transform.position = new Vector2(transform.position.x, (transform.position.y + 0.72f));
+
     }
     private void OnCollisionStay2D(Collision2D collision)
     {

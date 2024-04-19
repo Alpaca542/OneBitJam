@@ -904,6 +904,7 @@ MonoBehaviour:
   playerList:
   - {fileID: 2052144525}
   - {fileID: 0}
+  lightParticles: {fileID: 4073090141426295881, guid: 824aa1f25c40a3740a3fdaede0baa183, type: 3}
   BtnList:
   - {fileID: 1416102483}
   - {fileID: 843588158}

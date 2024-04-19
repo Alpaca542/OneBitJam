@@ -8,6 +8,7 @@ using UnityEngine.Rendering.Universal;
 public class ManageTransformation : MonoBehaviour
 {
     public GameObject[] playerList;
+    public GameObject lightParticles;
     public GameObject[] BtnList;
     public RectTransform panel;
     public GameObject slime;
@@ -48,14 +49,21 @@ public class ManageTransformation : MonoBehaviour
     }
     public void OnChosenSlimel()
     {
-        Destroy(ln);
-        foreach (GameObject gmb in playerList)
+        if (Camera.main.GetComponent<playerFollow>().player.tag != "Slime")
         {
-            gmb.GetComponent<Light2D>().enabled = false;
-            gmb.GetComponent<Player>().enabled = false;
+            Transform pltr = Camera.main.GetComponent<playerFollow>().player.transform;
+            GameObject lights = Instantiate(lightParticles, pltr.TransformDirection(new Vector2(pltr.position.x, (pltr.position.y + 0.72f))), pltr.rotation);
+            lights.transform.position = new Vector2(pltr.position.x, (pltr.position.y + 0.72f));
+            if (ln != null)
+                Destroy(ln);
+            foreach (GameObject gmb in playerList)
+            {
+                gmb.GetComponent<Light2D>().enabled = false;
+                gmb.GetComponent<Player>().enabled = false;
+            }
+            slime.GetComponent<SlimeController>().enabled = true;
+            Camera.main.GetComponent<playerFollow>().player = slime;
         }
-        slime.GetComponent<SlimeController>().enabled = true;
-        Camera.main.GetComponent<playerFollow>().player = slime;
     }
     public void Awake()
     {

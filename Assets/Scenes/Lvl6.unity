@@ -1139,6 +1139,7 @@ MonoBehaviour:
   playerList:
   - {fileID: 0}
   - {fileID: 880634457}
+  lightParticles: {fileID: 4073090141426295881, guid: 824aa1f25c40a3740a3fdaede0baa183, type: 3}
   BtnList:
   - {fileID: 1416102483}
   - {fileID: 843588158}
@@ -15074,7 +15075,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0082df3e1edb241288e97c5fe50e4b97, type: 3}
   - {fileID: 21300000, guid: 3cad02a2bf22743e485766308a5bde8b, type: 3}
   - {fileID: 21300000, guid: 0082df3e1edb241288e97c5fe50e4b97, type: 3}
-  stopIndexes: 0800000009000000
+  stopIndexes: 090000000a000000
   index: 0
   btnContinue: {fileID: 542807531}
   cnv: {fileID: 633097137}

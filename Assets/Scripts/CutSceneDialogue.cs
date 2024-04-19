@@ -141,6 +141,7 @@ public class CutSceneDialogue : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
         {
+            gameObject.GetComponent<soundManager>().sound.loop = false;
             StopCoroutine(coroutine);
             Display.text = sentences[index];
             btnContinue.SetActive(true);

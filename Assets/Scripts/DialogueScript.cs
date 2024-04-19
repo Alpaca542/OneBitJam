@@ -106,6 +106,7 @@ public class DialogueScript : MonoBehaviour
     {
         if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return)) && cnv.activeSelf)
         {
+            gameObject.GetComponent<soundManager>().sound.loop = false;
             StopCoroutine(coroutine);
             Display.text = sentences[index];
             btnContinue.SetActive(true);

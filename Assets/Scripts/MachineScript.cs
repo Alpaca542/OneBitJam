@@ -15,7 +15,7 @@ public class MachineScript : MonoBehaviour
         if(collision.gameObject.tag == "Slime" && AmIActivated && !used)
         {
             slime.SetActive(false);
-            man.SetActive(false);
+            man.SetActive(true);
             used = true;
             csd.Stststtst();
         }

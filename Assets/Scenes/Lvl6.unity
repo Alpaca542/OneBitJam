@@ -930,9 +930,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.21138072, y: -2.5797625}
+  m_Offset: {x: 2.2184587, y: -3.9754102}
   serializedVersion: 2
-  m_Radius: 4.0616713
+  m_Radius: 2.042091
 --- !u!114 &230127534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -948,8 +948,8 @@ MonoBehaviour:
   AmIActivated: 0
   used: 0
   csd: {fileID: 1641821820}
-  slime: {fileID: 0}
-  man: {fileID: 0}
+  slime: {fileID: 405427750}
+  man: {fileID: 155376034}
 --- !u!61 &230127535
 BoxCollider2D:
   m_ObjectHideFlags: 0

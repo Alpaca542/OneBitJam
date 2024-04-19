@@ -16036,7 +16036,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 60859805bfc00104181fb3ab61a0339b, type: 3}
   shouldILoop: 0
   amIPlaying: 0
-  shouldIPlayOnStart: 1
+  shouldIPlayOnStart: 0
 --- !u!82 &2125327197
 AudioSource:
   m_ObjectHideFlags: 0

@@ -12,7 +12,7 @@ public class soundManager : MonoBehaviour
     public bool amIPlaying = false;
     public bool shouldIPlayOnStart = false;
 
-    void Start()
+    void Awake()
     {
         sound = GetComponent<AudioSource>();
         if(shouldIPlayOnStart)

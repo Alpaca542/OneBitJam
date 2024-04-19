@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class bulletscript : MonoBehaviour
 {
+    public GameObject sounder;
     private void Awake()
     {
         Invoke(nameof(DieInThreeSeconds), 2f);
+        Instantiate(sounder, transform.position,transform.rotation);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

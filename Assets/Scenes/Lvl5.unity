@@ -517,6 +517,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Box
       objectReference: {fileID: 0}
+    - target: {fileID: 7541011110231885950, guid: 817c4b81895a94adc9e9110401b9a3fe, type: 3}
+      propertyPath: Strength
+      value: 2200
+      objectReference: {fileID: 0}
     - target: {fileID: 8604823648106010828, guid: 817c4b81895a94adc9e9110401b9a3fe, type: 3}
       propertyPath: m_TagString
       value: Untagged

@@ -5114,7 +5114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
   myAnimator: {fileID: 8631360868339575728}
-  mySound: {fileID: 0}
+  mySound: {fileID: 5044225119743554543}
   myPlayer: {fileID: 0}
   prt: {fileID: 7242625603239267164}
 --- !u!82 &7757046019746657174
@@ -5127,11 +5127,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 86dfa9d4a2cc7e64ab20600e5db9133d, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.4
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -5227,9 +5227,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sound: {fileID: 0}
   soundslist:
-  - {fileID: 8300000, guid: fb83cd31f88c9994a8a9167921492aa8, type: 3}
+  - {fileID: 8300000, guid: 86dfa9d4a2cc7e64ab20600e5db9133d, type: 3}
   shouldILoop: 0
   amIPlaying: 0
+  shouldIPlayOnStart: 0
 --- !u!111 &5374182573003069926
 Animation:
   m_ObjectHideFlags: 0

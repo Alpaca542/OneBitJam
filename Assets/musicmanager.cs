@@ -9,7 +9,7 @@ public class MusicManager : MonoBehaviour
     private void Awake()
     {
         sound = GetComponent<AudioSource>();
-        sound.volume = PlayerPrefs.GetFloat("volume");
+        sound.volume = PlayerPrefs.GetFloat("volume") * (1f / 3f);
         sound.Play();
     }
 }

@@ -7958,7 +7958,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6642506016265988871, guid: 00bd6a469c63e431ba5b8bae5b0b3afb, type: 3}
+      - m_Target: {fileID: 106821734}
         m_TargetAssemblyTypeName: LevelFinisher, Assembly-CSharp
         m_MethodName: OnNextPressed
         m_Mode: 1
@@ -17407,7 +17407,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6642506016265988871, guid: 00bd6a469c63e431ba5b8bae5b0b3afb, type: 3}
+      - m_Target: {fileID: 106821734}
         m_TargetAssemblyTypeName: LevelFinisher, Assembly-CSharp
         m_MethodName: OnLevelsPresed
         m_Mode: 1
@@ -18322,7 +18322,7 @@ Rigidbody2D:
   m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 4
+  m_Constraints: 5
 --- !u!50 &5141219225241313291
 Rigidbody2D:
   serializedVersion: 4
@@ -18349,7 +18349,7 @@ Rigidbody2D:
   m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 4
+  m_Constraints: 5
 --- !u!61 &5159455884725232578
 BoxCollider2D:
   m_ObjectHideFlags: 0

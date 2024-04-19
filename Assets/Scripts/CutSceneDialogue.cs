@@ -22,9 +22,13 @@ public class CutSceneDialogue : MonoBehaviour
     public GameObject player;
     public GameObject slime;
     IEnumerator coroutine;
+    
 
     IEnumerator Type()
     {
+        gameObject.GetComponent<soundManager>().sound.loop = true;
+        gameObject.GetComponent<soundManager>().PlaySound(1);
+
         if (Camera.main.GetComponent<playerFollow>().player.tag == "Player")
         {
             Camera.main.GetComponent<playerFollow>().player.GetComponent<Player>().enabled = false;
@@ -49,7 +53,9 @@ public class CutSceneDialogue : MonoBehaviour
         {
             Display.text += letter1;
             yield return new WaitForSeconds(typingspeed);
+            
         }
+        gameObject.GetComponent<soundManager>().sound.loop = false;
         btnContinue.SetActive(true);
     }
     private void Start()
@@ -116,6 +122,8 @@ public class CutSceneDialogue : MonoBehaviour
                 Display2.gameObject.GetComponent<RectTransform>().sizeDelta = new Vector2(256, 256);
             }
         }
+        gameObject.GetComponent<soundManager>().PlaySound(0);
+        
     }
     public void LastWords()
     {

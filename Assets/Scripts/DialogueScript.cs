@@ -21,7 +21,9 @@ public class DialogueScript : MonoBehaviour
 
     IEnumerator Type()
     {
-        if(Camera.main.GetComponent<playerFollow>().player.tag == "Player")
+        gameObject.GetComponent<soundManager>().sound.loop = true;
+        gameObject.GetComponent<soundManager>().PlaySound(1);
+        if (Camera.main.GetComponent<playerFollow>().player.tag == "Player")
         {
             Camera.main.GetComponent<playerFollow>().player.GetComponent<Player>().enabled = false;
             Camera.main.GetComponent<playerFollow>().player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
@@ -52,6 +54,7 @@ public class DialogueScript : MonoBehaviour
             Display.text += letter1;
             yield return new WaitForSeconds(typingspeed);
         }
+        gameObject.GetComponent<soundManager>().sound.loop = false;
         btnContinue.SetActive(true);
     }
     private void Start()
@@ -61,6 +64,7 @@ public class DialogueScript : MonoBehaviour
             cnv.SetActive(true);
             coroutine = Type();
             StartCoroutine(coroutine);
+            gameObject.GetComponent<soundManager>().PlaySound(0);
         }
     }
     public void Stststtst()

@@ -14,6 +14,7 @@ public class ManageTransformation : MonoBehaviour
     public GameObject slime;
     public GameObject line;
     public GameObject ln;
+    Coroutine crtn;
     public LayerMask defaultlayer;
     public LayerMask playerlayer;
     public void OnChosenInPanel(int BtnNumber)
@@ -32,11 +33,19 @@ public class ManageTransformation : MonoBehaviour
                 slime.GetComponent<SlimeController>().enabled = false;
                 slime.layer = 1;
                 slime.GetComponent<Animation>().Play();
-                StartCoroutine(InvokeStopBlooming(BtnNumber, 0.4f));
+                if (crtn != null)
+                {
+                    StopCoroutine(crtn);
+                }
+                crtn = StartCoroutine(InvokeStopBlooming(BtnNumber, 0.4f));
             }
             else
             {
-                StartCoroutine(InvokeStopBlooming(BtnNumber, 0));
+                if(crtn != null)
+                {
+                    StopCoroutine(crtn);
+                }
+                crtn = StartCoroutine(InvokeStopBlooming(BtnNumber, 0));
             }
         }
     }

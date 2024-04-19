@@ -8,11 +8,8 @@ public class MusicManager : MonoBehaviour
     public AudioSource sound;
     private void Awake()
     {
-        if (false)
-        {
-            sound = GetComponent<AudioSource>();
-            sound.volume = PlayerPrefs.GetFloat("volume");
-            sound.Play();
-        }
+        sound = GetComponent<AudioSource>();
+        sound.volume = PlayerPrefs.GetFloat("volume");
+        sound.Play();
     }
 }

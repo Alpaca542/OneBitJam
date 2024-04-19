@@ -47,6 +47,7 @@ public class LevelFinisher : MonoBehaviour
         if(collision.gameObject.tag == "Slime")
         {
             StopTheLevel();
+            gameObject.GetComponent<soundManager>().PlaySound(0);
         }
         else if(collision.gameObject.tag == "Player")
         {

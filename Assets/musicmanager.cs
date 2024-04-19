@@ -8,7 +8,7 @@ public class MusicManager : MonoBehaviour
     public AudioSource sound;
     private void Awake()
     {
-        if (PlayerPrefs.GetString("sfx") == "True")
+        if (false)
         {
             sound = GetComponent<AudioSource>();
             sound.volume = PlayerPrefs.GetFloat("volume");

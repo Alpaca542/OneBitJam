@@ -10,10 +10,13 @@ public class soundManager : MonoBehaviour
     public AudioClip[] soundslist;
     public bool shouldILoop = false;
     public bool amIPlaying = false;
+    public bool shouldIPlayOnStart = false;
 
     void Start()
     {
         sound = GetComponent<AudioSource>();
+        if(shouldIPlayOnStart)
+        { PlaySound(0); }
     }
 
     // Update is called once per frame

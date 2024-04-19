@@ -27,15 +27,22 @@ public class ManageTransformation : MonoBehaviour
                 gmb.GetComponent<Light2D>().enabled = false;
                 gmb.GetComponent<Player>().enabled = false;
             }
-            slime.GetComponent<SlimeController>().enabled = false;
-            slime.layer = 1;
-            slime.GetComponent<Animation>().Play();
-            StartCoroutine(InvokeStopBlooming(BtnNumber));
+            if (Camera.main.GetComponent<playerFollow>().player.tag == "Slime")
+            {
+                slime.GetComponent<SlimeController>().enabled = false;
+                slime.layer = 1;
+                slime.GetComponent<Animation>().Play();
+                StartCoroutine(InvokeStopBlooming(BtnNumber, 0.4f));
+            }
+            else
+            {
+                StartCoroutine(InvokeStopBlooming(BtnNumber, 0));
+            }
         }
     }
-    public IEnumerator InvokeStopBlooming(int BtnNumber)
+    public IEnumerator InvokeStopBlooming(int BtnNumber, float waittime)
     {
-        yield return new WaitForSeconds(0.4f);
+        yield return new WaitForSeconds(waittime);
         ln = Instantiate(line, slime.transform.position, Quaternion.identity);
         ln.GetComponent<LineThatFollows>().WhatToFollow = playerList[BtnNumber];
         playerList[BtnNumber].GetComponent<Light2D>().enabled = true;

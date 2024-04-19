@@ -373,6 +373,7 @@ MonoBehaviour:
   AmIActive: 0
   rayer1: {fileID: 4551151095498601599}
   rayer3: {fileID: 1712328165546493679}
+  lightParticles: {fileID: 4073090141426295881, guid: 824aa1f25c40a3740a3fdaede0baa183, type: 3}
 --- !u!114 &5719183176965468408
 MonoBehaviour:
   m_ObjectHideFlags: 0

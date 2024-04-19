@@ -87,4 +87,11 @@ public class LevelFinisher : MonoBehaviour
     {
         SceneManager.LoadScene("LvlMenu");
     }
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            OnRestart();
+        }
+    }
 }

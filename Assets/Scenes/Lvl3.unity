@@ -7958,7 +7958,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 6642506016265988871, guid: 00bd6a469c63e431ba5b8bae5b0b3afb, type: 3}
         m_TargetAssemblyTypeName: LevelFinisher, Assembly-CSharp
         m_MethodName: OnNextPressed
         m_Mode: 1
@@ -17407,7 +17407,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 6642506016265988871, guid: 00bd6a469c63e431ba5b8bae5b0b3afb, type: 3}
         m_TargetAssemblyTypeName: LevelFinisher, Assembly-CSharp
         m_MethodName: OnLevelsPresed
         m_Mode: 1

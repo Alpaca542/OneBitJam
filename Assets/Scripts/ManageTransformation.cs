@@ -59,8 +59,7 @@ public class ManageTransformation : MonoBehaviour
         if (Camera.main.GetComponent<playerFollow>().player.tag != "Slime")
         {
             Transform pltr = Camera.main.GetComponent<playerFollow>().player.transform;
-            GameObject lights = Instantiate(lightParticles, pltr.TransformDirection(new Vector2(pltr.position.x, (pltr.position.y + 0.72f))), pltr.rotation);
-            lights.transform.position = new Vector2(pltr.position.x, (pltr.position.y + 0.72f));
+            GameObject lights = Instantiate(lightParticles, pltr.position, pltr.rotation);
             if (ln != null)
                 Destroy(ln);
             foreach (GameObject gmb in playerList)

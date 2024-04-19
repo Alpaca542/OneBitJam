@@ -92,6 +92,7 @@ public class CutSceneDialogue : MonoBehaviour
             {
                 GameObject.FindGameObjectWithTag("Slime").GetComponent<SlimeController>().enabled = true;
             }
+
             cnvInGame.SetActive(true);
             btnContinue.SetActive(false);
             cnv.SetActive(false);
@@ -106,6 +107,14 @@ public class CutSceneDialogue : MonoBehaviour
         {
             coroutine = Type();
             StartCoroutine(coroutine);
+        }
+        if(SceneManager.GetActiveScene().name == "Lvl6")
+        {
+
+            if (faces[index].name == "whatToDo")
+            {
+                Display2.gameObject.GetComponent<RectTransform>().sizeDelta = new Vector2(256, 256);
+            }
         }
     }
     public void LastWords()

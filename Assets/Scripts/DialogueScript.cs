@@ -42,6 +42,10 @@ public class DialogueScript : MonoBehaviour
         {
             Display2.gameObject.GetComponent<RectTransform>().sizeDelta = new Vector2(256, 256);
         }
+        else if (faces[index].name == "whatToDo")
+        {
+            Display2.gameObject.GetComponent<RectTransform>().sizeDelta = new Vector2(256, 256);
+        }
         Display2.sprite = faces[index];
         foreach (char letter1 in sentences[index].ToCharArray())
         {

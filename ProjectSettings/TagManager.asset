@@ -20,7 +20,7 @@ TagManager:
   - Player
   - JumpOn
   - UpperUI
-  - 
+  - lightParticle
   - 
   - 
   - 
@@ -44,6 +44,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: lights
+    uniqueID: 1099315887
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

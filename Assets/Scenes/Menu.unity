@@ -720,7 +720,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_TargetDisplay: 0
 --- !u!224 &321193873
 RectTransform:
@@ -12518,6 +12518,7 @@ PrefabInstance:
     - {fileID: 5264412672752153084, guid: a2c8d3cb66d0d4be2b9e2cf8aeeb0de7, type: 3}
     - {fileID: 5044225119743554543, guid: a2c8d3cb66d0d4be2b9e2cf8aeeb0de7, type: 3}
     - {fileID: 5374182573003069926, guid: a2c8d3cb66d0d4be2b9e2cf8aeeb0de7, type: 3}
+    - {fileID: 7757046019746657174, guid: a2c8d3cb66d0d4be2b9e2cf8aeeb0de7, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

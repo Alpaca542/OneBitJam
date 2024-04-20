@@ -225,7 +225,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Content: {fileID: 798715332}
   m_Horizontal: 1
-  m_Vertical: 1
+  m_Vertical: 0
   m_MovementType: 1
   m_Elasticity: 0.1
   m_Inertia: 1
@@ -10228,6 +10228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrollbar: {fileID: 1016249812}
+  scroll_pos: 0
 --- !u!1 &911980725
 GameObject:
   m_ObjectHideFlags: 0
@@ -10523,7 +10524,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1016759764}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.4380403
+  m_Size: 0.43804035
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

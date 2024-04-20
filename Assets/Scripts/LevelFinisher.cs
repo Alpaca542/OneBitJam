@@ -5,6 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class LevelFinisher : MonoBehaviour
 {
+    private float zoom;
+    private float zoomMultiplier = 4f;
+    public float minZoom = 5f;
+    public float maxZoom = 10f;
+    private float velocity = 0f;
+    public float smoothTime = 0.1f;
+
     public GameObject panelForTheEnd;
     public GameObject panelForPause;
     public DialogueScript dlgmng;
@@ -17,12 +24,18 @@ public class LevelFinisher : MonoBehaviour
             GameObject.FindGameObjectWithTag("Slime").SetActive(false);
             explosion1.SetActive(true);
             if (SceneManager.GetActiveScene().name == "Lvl2" || SceneManager.GetActiveScene().name == "Lvl3" || SceneManager.GetActiveScene().name == "Lvl4")
+            {
                 Camera.main.GetComponent<Camera>().orthographicSize = 10f;
-            Camera.main.GetComponent<playerFollow>().secondCamera.GetComponent<Camera>().orthographicSize = 10f;
+                Camera.main.GetComponent<playerFollow>().secondCamera.GetComponent<Camera>().orthographicSize = 10f;
+            }
+
 
             if (SceneManager.GetActiveScene().name == "Lvl5")
+            {
                 Camera.main.GetComponent<Camera>().orthographicSize = 15f;
                 Camera.main.GetComponent<playerFollow>().secondCamera.GetComponent<Camera>().orthographicSize = 15f;
+            }
+
             Camera.main.GetComponent<playerFollow>().enabled = false;
             Camera.main.transform.position = new Vector3(explosion1.transform.position.x, explosion1.transform.position.y, -10);
 
@@ -87,11 +100,22 @@ public class LevelFinisher : MonoBehaviour
     {
         SceneManager.LoadScene("LvlMenu");
     }
+
+    private void Start()
+    {
+        zoom = Camera.main.GetComponent<Camera>().orthographicSize;
+    }
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
             OnRestart();
         }
+        float scroll = Input.GetAxis("Mouse ScrollWheel");
+        zoom -= scroll * zoomMultiplier;
+        zoom = Mathf.Clamp(zoom, minZoom, maxZoom);
+        Camera.main.GetComponent<Camera>().orthographicSize = Mathf.SmoothDamp(Camera.main.GetComponent<Camera>().orthographicSize, zoom, ref velocity, smoothTime);
+        Camera.main.GetComponent<playerFollow>().secondCamera.GetComponent<Camera>().orthographicSize = Mathf.SmoothDamp(Camera.main.GetComponent<playerFollow>().secondCamera.GetComponent<Camera>().orthographicSize, zoom, ref velocity, smoothTime);
     }
 }

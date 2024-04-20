@@ -154,6 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SmokeEffect: {fileID: 947272890}
   CnvMain: {fileID: 1015405310}
+  EndSmoke: {fileID: 1010799778}
   CnvSettings: {fileID: 599088786}
   lvl: 0
 --- !u!4 &127776383
@@ -543,7 +544,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -245.05, y: 261}
+  m_AnchoredPosition: {x: -245.04999, y: 261}
   m_SizeDelta: {x: 736.85, y: 263.74}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &302791304
@@ -12046,7 +12047,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -245.05, y: 118.5}
+  m_AnchoredPosition: {x: -245.04999, y: 118.5}
   m_SizeDelta: {x: 736.85, y: 263.74}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1320419731

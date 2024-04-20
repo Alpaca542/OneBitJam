@@ -7,10 +7,16 @@ public class MenuManager : MonoBehaviour
 {
     public GameObject SmokeEffect;
     public GameObject CnvMain;
+    public GameObject EndSmoke;
     public GameObject CnvSettings;
     public int lvl;
     private void Start()
     {
+        if (!PlayerPrefs.HasKey("Started"))
+        {
+            EndSmoke.SetActive(false);
+            PlayerPrefs.SetInt("Started", 1);
+        }
         if (!PlayerPrefs.HasKey("CurentLevel"))
         {
             PlayerPrefs.SetInt("CurentLevel", 1);

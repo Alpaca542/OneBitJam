@@ -49,7 +49,7 @@ public class LevelFinisher : MonoBehaviour
     public void StopTheLevelInvoke()
     {
         panelForTheEnd.SetActive(true);
-        PlayerPrefs.SetInt("CurentLevel", System.Convert.ToInt32(SceneManager.GetActiveScene().name.Replace("Lvl", "")));
+        PlayerPrefs.SetInt("CurentLevel", System.Convert.ToInt32(SceneManager.GetActiveScene().name.Replace("Lvl", ""))+1);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -94,7 +94,7 @@ public class LevelFinisher : MonoBehaviour
     }
     public void InvokeOpenLastLevel()
     {
-        SceneManager.LoadScene("Lvl" + (PlayerPrefs.GetInt("CurentLevel")+1).ToString());
+        SceneManager.LoadScene("Lvl" + (PlayerPrefs.GetInt("CurentLevel")).ToString());
     }
     public void InvokeOpenLvlMenu()
     {

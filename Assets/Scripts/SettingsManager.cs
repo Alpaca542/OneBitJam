@@ -17,7 +17,7 @@ public class SetingsManager : MonoBehaviour
     public void ResetBtn()
     {
         PlayerPrefs.SetFloat("volume", 1);
-        PlayerPrefs.SetString("sfx", "False");
+        PlayerPrefs.SetString("sfx", "True");
         if (PlayerPrefs.GetString("sfx") == "True")
         {
             joysticktoggle.isOn = true;
@@ -40,7 +40,7 @@ public class SetingsManager : MonoBehaviour
         }
         if (!PlayerPrefs.HasKey("sfx"))
         {
-            PlayerPrefs.SetString("sfx", "False");
+            PlayerPrefs.SetString("sfx", "True");
         }
 
 

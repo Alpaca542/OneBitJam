@@ -45,6 +45,7 @@ public class LvlManager : MonoBehaviour
             if (scroll_pos < pos[i] + (distance / 2) && scroll_pos > pos[i] - (distance / 2))
             {
                 transform.GetChild(i).localScale = Vector3.Lerp(transform.GetChild(i).localScale, new Vector2(1f, 1f), 0.1f);
+                //sound
                 for (int a = 0; a < pos.Length; a++)
                 {
                     if(a!=i)

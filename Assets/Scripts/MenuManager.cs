@@ -13,7 +13,7 @@ public class MenuManager : MonoBehaviour
     {
         if (!PlayerPrefs.HasKey("CurentLevel"))
         {
-            PlayerPrefs.SetInt("CurentLevel", 1);
+            PlayerPrefs.SetInt("CurentLevel", 0);
         }
     }
     public void OpenLastLevel()
@@ -61,6 +61,6 @@ public class MenuManager : MonoBehaviour
     }
     public void InvokeOpenLastLevel()
     {
-        SceneManager.LoadScene("Lvl" + (PlayerPrefs.GetInt("CurentLevel") + 1).ToString());
+        SceneManager.LoadScene("Lvl" + (PlayerPrefs.GetInt("CurentLevel")).ToString());
     }
 }

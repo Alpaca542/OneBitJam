@@ -6,11 +6,15 @@ using UnityEngine.UI;
 public class LvlManager : MonoBehaviour
 {
     public GameObject scrollbar;
-    float scroll_pos = 0;
+    public float scroll_pos = 0;
     float[] pos;
     void Start()
     {
-        
+        if (!PlayerPrefs.HasKey("CurentLevel"))
+        {
+            PlayerPrefs.SetInt("CurentLevel", 1);
+        }
+        scroll_pos = 0 + 0.2061915f*(PlayerPrefs.GetInt("CurentLevel"));
     }
 
     // Update is called once per frame

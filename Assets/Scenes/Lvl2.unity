@@ -9870,6 +9870,7 @@ MonoBehaviour:
   - There is no way you're getting out of this cage
   - But I don't want to stay here...
   - Use guard sprites on the left to control them
+  - Use R to restart the level and the mouse wheel to zoom out
   - It feels so great to jump again
   - I might be able to use this elevator...
   - That looks like a good trampoline
@@ -9885,13 +9886,14 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 40f0743d7cd0540d38d936c3b4475b17, type: 3}
   - {fileID: 21300000, guid: 0082df3e1edb241288e97c5fe50e4b97, type: 3}
   - {fileID: 21300000, guid: 1427c5247d720cc418d873c8f953ed9d, type: 3}
+  - {fileID: 21300000, guid: 1427c5247d720cc418d873c8f953ed9d, type: 3}
   - {fileID: 21300000, guid: 0082df3e1edb241288e97c5fe50e4b97, type: 3}
   - {fileID: 21300000, guid: 0082df3e1edb241288e97c5fe50e4b97, type: 3}
   - {fileID: 21300000, guid: 0082df3e1edb241288e97c5fe50e4b97, type: 3}
   - {fileID: 21300000, guid: 0082df3e1edb241288e97c5fe50e4b97, type: 3}
   - {fileID: 21300000, guid: 0082df3e1edb241288e97c5fe50e4b97, type: 3}
   - {fileID: 21300000, guid: 0082df3e1edb241288e97c5fe50e4b97, type: 3}
-  stopIndexes: 080000000a0000000c0000000d0000000e0000000f000000
+  stopIndexes: 090000000b0000000d0000000e0000000f00000010000000
   index: 0
   btnContinue: {fileID: 542807531}
   cnv: {fileID: 633097137}

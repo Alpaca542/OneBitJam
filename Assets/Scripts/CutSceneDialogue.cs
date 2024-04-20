@@ -107,9 +107,8 @@ public class CutSceneDialogue : MonoBehaviour
         {
             cnv.SetActive(false);
             explosion1.SetActive(true);
-            slime.SetActive(false);
             player.SetActive(true);
-            Invoke(nameof(finishlevel), 0.8f);
+            finishlevel();
         }
         else
         {

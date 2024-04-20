@@ -12,7 +12,7 @@ public class MachineScript : MonoBehaviour
     public GameObject man;
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Slime" && AmIActivated && !used)
+        if(collision.gameObject.tag == "Player" && AmIActivated && !used)
         {
             used = true;
             csd.Stststtst();

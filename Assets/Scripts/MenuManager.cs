@@ -13,7 +13,7 @@ public class MenuManager : MonoBehaviour
     {
         if (!PlayerPrefs.HasKey("CurentLevel"))
         {
-            PlayerPrefs.SetInt("CurentLevel", 0);
+            PlayerPrefs.SetInt("CurentLevel", 1);
         }
     }
     public void OpenLastLevel()

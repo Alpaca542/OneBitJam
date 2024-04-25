@@ -1476,10 +1476,12 @@ MonoBehaviour:
   - {fileID: 843588158}
   - {fileID: 181264353}
   - {fileID: 611757585}
-  panel: {fileID: 0}
+  ObjList: []
   slime: {fileID: 0}
   line: {fileID: 8834746703019447865, guid: 65da33beef0c6491c843d0efc6200ce2, type: 3}
   ln: {fileID: 0}
+  TransformCanvas: {fileID: 1772982967}
+  slimeBtn: {fileID: 0}
   defaultlayer:
     serializedVersion: 2
     m_Bits: 0

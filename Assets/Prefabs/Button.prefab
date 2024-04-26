@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8084970566082130193}
   m_Layer: 0
   m_Name: Button
-  m_TagString: Untagged
+  m_TagString: Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -263,3 +263,4 @@ MonoBehaviour:
   - {fileID: 8300000, guid: da2718493dadbca459dbfc325638cbd7, type: 3}
   shouldILoop: 0
   amIPlaying: 0
+  shouldIPlayOnStart: 0

@@ -18,18 +18,18 @@ public class bulletscript : MonoBehaviour
             collision.gameObject.GetComponent<Player>().AmIFlying = true;
             Destroy(gameObject);
         }
-        if (collision.gameObject.tag == "Slime")
+        else if (collision.gameObject.tag == "Slime")
         {
             collision.gameObject.GetComponent<Rigidbody2D>().AddForce(transform.right * 500f);
             collision.gameObject.GetComponent<SlimeController>().AmIFlying = true;
             Destroy(gameObject);
         }
-        if (collision.gameObject.tag == "Box")
+        else if (collision.gameObject.tag == "Box")
         {
             collision.gameObject.GetComponent<Rigidbody2D>().AddForce(transform.right * 500f);
             Destroy(gameObject);
         }
-        else
+        else if (collision.gameObject.tag != "Button")
         {
             Destroy(gameObject);
         }

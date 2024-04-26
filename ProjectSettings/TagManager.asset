@@ -11,6 +11,7 @@ TagManager:
   - Slime
   - Machine
   - line
+  - Button
   layers:
   - Default
   - TransparentFX
